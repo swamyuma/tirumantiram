@@ -60,7 +60,7 @@
         .nav-arrow:hover{border-color:var(--gild);color:var(--gild-lit);background:rgba(45,32,18,.85);}
         .nav-arrow:disabled{opacity:.22;cursor:default;}
 
-        .book{position:relative;width:min(1600px,96vw);height:min(90%,860px);perspective:2800px;}
+        .book{position:relative;width:min(1280px,90vw);height:min(90%,860px);perspective:2800px;}
         .book::before,.book::after{content:"";position:absolute;top:6px;bottom:6px;width:12px;z-index:0;
             background:repeating-linear-gradient(90deg,#2a1f12 0 2px,#1c1409 2px 4px);box-shadow:0 22px 45px rgba(0,0,0,.6);}
         .book::before{left:-6px;border-radius:4px 0 0 4px;} .book::after{right:-6px;border-radius:0 4px 4px 0;}
@@ -92,6 +92,7 @@
         .translation .lead{float:left;font-family:var(--font-inscr);font-size:3.1rem;line-height:.82;padding:6px 12px 0 0;color:var(--gild);}
         .notes{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:1.02rem;line-height:1.7;color:var(--cream-dim);white-space:pre-line;}
         .notes-label{font-family:var(--font-inscr);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gild-deep);display:block;margin-bottom:8px;}
+        .notes .note-line.sub{padding-left:1.8em;}
         .folio{position:absolute;bottom:14px;width:58px;height:58px;display:grid;place-items:center;font-family:var(--font-inscr);font-size:1.25rem;color:var(--gild-lit);}
         .folio svg{position:absolute;inset:0;width:100%;height:100%;color:var(--gild);opacity:.7;}
         .folio span{position:relative;z-index:1;} .folio.left{left:34px;} .folio.right{right:34px;}
@@ -122,7 +123,7 @@
         footer{padding:8px 26px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;}
         .progress-track{width:min(760px,86vw);height:2px;background:var(--line);position:relative;}
         .progress-fill{position:absolute;left:0;top:0;height:100%;width:0;background:linear-gradient(90deg,var(--gild-deep),var(--gild-lit));transition:width .4s ease;}
-        .progress-text{font-size:1.5rem;color:var(--cream-dim);letter-spacing:.04em;text-align:center;}
+        .progress-text{font-size:1.5rem;color:var(--cream-dim);letter-spacing:.04em;text-align:center;white-space:nowrap;}
         .progress-text b{color:var(--gild-lit);font-weight:500;}
         .side-toggle{display:none;}
 
@@ -246,7 +247,10 @@ function buildRight(v){
     if(trans){ const m=trans.match(/^([A-Za-z])([\s\S]*)$/);
         h+=`<div class="translation">${m?`<span class="lead">${m[1]}</span>${esc(m[2])}`:esc(trans)}</div>`; }
     const notes=tidy(v.notes);
-    if(prefs.notes && notes) h+=`<div class="notes"><span class="notes-label">Notes</span>${esc(notes)}</div>`;
+    if(prefs.notes && notes){ let lvl=0; const body=notes.split('\n').map(ln=>{
+            if(/^[a-z][.)]\s/.test(ln)) lvl=1; else if(/^\(?\d+[.)]\s/.test(ln)) lvl=0;
+            return `<div class="note-line${lvl?' sub':''}">${esc(ln)}</div>`; }).join('');
+        h+=`<div class="notes"><span class="notes-label">Notes</span>${body}</div>`; }
     h+=`<div class="folio right">${TRI}<span>${v.verse_number>0?esc(v.verse_number):'❋'}</span></div>`;
     return h;
 }
