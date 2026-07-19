@@ -1,0 +1,142 @@
+TIRUMANTIRAM — FRONT MATTER OCR REVIEW NOTES
+Source file: thirumanthiram_full_text.txt (OCR of Dr. B. Natarajan's English edition)
+Scope reviewed: INTRODUCTION (lines 240–1827) + PROLOGUE (lines 1828–2013)
+Method: 5 parallel review agents over the Introduction; Prologue reviewed directly.
+
+Legend:
+  HIGH = unambiguous OCR typo, safe to auto-correct.
+  LOW  = reconstruction / guess — NEEDS UMA'S JUDGMENT before applying.
+  Verse-reference numbers (in parentheses) that look internally inconsistent are flagged
+  LOW because only the printed book can confirm the correct number.
+
+================================================================================
+PROLOGUE (1828–2013)  — cleaned prose already written to front_matter_clean.txt
+================================================================================
+HIGH fixes applied:
+  1833 Temoves->removes | 1839 'ना the Praise'->'In the Praise' | 1857 philosephy->philosophy
+  1882 siands->stands, "in this"->"In this" | 1904 Often.in->Often in | 1912 {poetically->(poetically
+  1920 pedple->people | 1922 IJneya->Jneya | 1923 knower}->knower) | 1931 कते->and
+  1935 eternaliy->eternally | 1982 ail->all | 1986 [णः->Tiru, "holy. .The"->"holy. The"
+  1989 6.2.->e.g. | 1997 worc.->word | plus quote/backtick/double-period noise removed.
+LOW / reconstructions applied (verify):
+  1843 "0௦0015 00௨." -> "God is One."  (from context: "That is Tirumular's first message")
+  1901-1906 dropped phrase restored from stray fragment at line 1885:
+        "...author of this [inspired work, in turn had] seven disciples:"
+  1924 "Maya and Mamaya (pure and impure)" — kept "Mamaya" as printed; may be "Amaya"/
+        "Suddha & Asuddha Maya". UNRESOLVED.
+  1945 "vd TIRUMANTIRAM" -> stripped as running header (page ~xiv).
+
+================================================================================
+INTRODUCTION 240–560
+================================================================================
+HIGH:
+  245 originaly->originally, residing'->residing | 250 mioved->moved | 258 "115 body"->"his body"
+  261 asecetic->ascetic | 269 Thiruvavaduthuwrai->Thiruvavaduthurai | 270 "ta be"->"to be"
+  271 flocke+t->flocked | 272 "ani then"->"and then" | 273 recoriled->recorded
+  274 "recorded. and"->"recorded, and" | 283 "the.development"->"the development"
+  290 sowl->soul | 298 existerice->existence | 312 stray "‘." + hyphen | 317 stray hyphen
+  339 §stains->stains | 358 "fer a while"->"for a while" | 360 scul->soul | 365 "bodies. he"->"bodies he"
+  367 "limited प `"->"limited in" | 375 "in all. and"->"in all, and" | 385 "of* the"->"of the", dnd->and
+  387 ft->It | 392 thrée->three | 408 ovtrwhelming->overwhelming | 409 dissoved->dissolved
+  413 "ம."->"it." | 435 "the- rungs"->"the rungs" | 437 "called: Sanmarga"->"called Sanmarga"
+  441 tke->the | 455 "inebriated-"->"inebriated" | 456 "concern 1 life"->"concern in life"
+  457 "पाऽ servitors"->"His servitors" | 460 "When:"->"When", "pouring."->"pouring"
+  473 "is.‘Ontre"->"is 'Ondre" | 477 "on to. declare"->"on to declare" | 536 "slides."->"slides"
+LOW:
+  301 "Aprtak Siddhi" -> "Aprithak-siddhi" (Sanskrit spelling uncertain)
+  361 "235४. because like cattle" -> "Pasu, because..." (garbled)
+  364 "ficcha-jnana-kriya"->"(iccha-jnana-kriya" (leading "(" misread as "f")
+  432 "Sarmpya Mukti" -> "Samipya" or "Sarupya" Mukti (uncertain)
+  442-445 "They are not two" — word "They" split across lines; quote noise.
+  447 "५५" / 492 stray ":" inside Tamil verse — artifacts, delete.
+
+================================================================================
+INTRODUCTION 560–880
+================================================================================
+HIGH:
+  562 termed_Natha->termed Natha | 575 "tobe"->"to be" | 576 "Tamil. and"->"Tamil and"
+  593 "seéven,."->"seven," | 629 pparénthetically->parenthetically | 630 "would.appear"->"would appear"
+  634 {philsophical)->(philosophical) | 678 €ssence->essence | 679 micfocosmic->microcosmic
+  702 "lies. in"->"lies in" | 705 "that 15 non"->"that is non" | 707 "over-looked,."->"overlooked,"
+  734 stray quotes on "one who is full of Karuna" | 750 bor->born | 771 ail->all (+stray ",.")
+  787 congnising->cognising | 789 "gunas._ in"->"gunas in" | 795 {compare->(compare
+  799 "to SOO"->"to 500" | 814 "get~ rid"->"get rid" | 829 stray ® after Worship | 872 techiniques->techniques
+  873 purdery->prudery
+LOW:
+  663 "Jivar-raukta" -> "Jivan-mukta" | 681 "PEMBIOINE" -> "remaining" (garbled)
+  705 stray "=" | 732 "Primal / டீ (390)" dropped word ("[One]"?) | 794 "35 Tattvas" maybe "25"
+  796 "810. Adharas (469)" digit order suspect (often 108) | 804 "Prayakalas"->"Pralayakalas"
+  825 "ॐत is also" -> "and is also"
+
+================================================================================
+INTRODUCTION 880–1200
+================================================================================
+HIGH:
+  892 "discusses. Yoga"->"discusses Yoga" | 896 Ydga->Yoga | 899 "V TANTRA FOUR"->"IV TANTRA FOUR"
+  908 "''Ambala'' .15 a"->"is a" | 951 "was. One"->"was One" | 968 "(1307 (௦. 1318)"->"1307 to 1318"
+  983 "IV TANTRA FIVE"->"V TANTRA FIVE" | 992 Etemal->Eternal | 1015 Jnanna->Jnana
+  1021 "Path. is"->"Path is" | 1027 arid->and | 1035 i454->1454 | 1057 unusal->unusual
+  1066 "VT TANTRA SIX"->"VI TANTRA SIX" | 1076 "(Sth)"->"(5th)", drop ~ | 1078 "1605 ६0 ' 1613"->"1605 to 1613"
+  1088 Siddhania->Siddhanta | 1093 indispensible->indispensable | 1102 "VIE TANTRA SEVEN"->"VII TANTRA SEVEN"
+  1105 aspecis->aspects, commen->common | 1116 {Pinda)->(Pinda) | 1118 "$777"->"1777"
+  1161 {1730)->(1730) | 1195 "वात the"->"and the" (drop backtick) | 1197 hospitablity->hospitality
+LOW:
+  911 "8162582, the Void" -> a Void term e.g. "Sunya" (garbled) | 941 trailing stray "6"
+  991 "\"கம்‌ the path\"" verb missing ("tread"/"walk") | 1050 "Gods Form"->"God's Form"
+  1109 sentence-initial "In" | 1183 "Su~ 2106 objective"->"Supreme objective"
+  NOTE: Tantra roman numerals were systematically off by one (IV/V/VI/VII) — see 899,983,1066,1102.
+
+================================================================================
+INTRODUCTION 1200–1520
+================================================================================
+HIGH:
+  1200 1922}->1922) | 1207 "matter: which"->"matter which" | 1222 "0065 \"->"does" (+drop backtick)
+  1226 techiniques->techniques | 1238 "மா is the Primal"->"Sun is the Primal" | 1240 Tirumulaf->Tirumular
+  1288 compasion->compassion | 1301 substle->subtle | 1304 "Man (Mind"->"Manas (Mind)"
+  1345 "வும்‌ €)"->"and e)" | 1348 Tatvas->Tattvas | 1367 "Maya. is"->"Maya is"
+  1374 "Maya (2169) God"->"Maya (2169). God" | 1375 stray "=" | 1380 "Purvsha = 25 Taittvas"->"Purusha = 25 Tattvas"
+  1433 Siate->State | 1445 {verses->(verses | 1446 stray leading "|" | 1447 imporiance->importance (+stray "3")
+  1449 "{६ is"->"It is" | 1450 {2187)->(2187) | 1457 aad->and | 1464 congnises->cognises
+  1488 Turiyatit->Turiyatita | 1418 "The Sth State"->"The 5th State"
+LOW:
+  1264 stray "ee" | 1306 Puriashta->Puryashtaka | 1319 "(Dhanu)" maybe "(Dhruva)"
+  1366 "(2167 to 2163)" -> range must ascend, likely 2183 | 1382 "25+Purusha+Void...=28" arithmetic off
+  1425 "னி In Turiyatita" list marker | 1430 "aks In the Sushupti" list marker
+  1465 "he who ९०९13९८5" verb unclear ("dwells"/"revels")
+
+================================================================================
+INTRODUCTION 1520–1827
+================================================================================
+HIGH:
+  1542 "cven In"->"even in" | 1579 eliminatiqn->elimination | 1582 "7 am"->"I am"
+  1592 "ant Jnana"->"and Jnana" | 1597 "th mind"->"the mind" | 1617 "upon. in"->"upon in"
+  1621 earler->earlier | 1627 "at. the"->"at the" | 1631 whith->with | 1641 "also. seems"->"also seems"
+  1658 "also. three"->"also three" | 1694 arid->and, "meek' 15"->"meek' is" | 1702 fuither->further
+  1716 "2562=and"->"2562 and" | 1723 WViswa->Viswa | 1740 mahin->main | 1743 variouys->various
+  1744 "the. Lord"->"the Lord" | 1748 "Sukshma,"->"Sukshma" | 1750 "S-syllabled"->"5-syllabled"
+  1754 Sundaca->Sundara | 1764 "to:-Svarupa"->"to Svarupa" | 1770 Manifestion->Manifestation
+  1775 fom->from | 1778 {not->(not | 1781 "does not. 055655"->"does not possess"
+  1789 aré->are | 1791 "Gur or"->"Guru or" | 1806 eiuds->ends
+LOW:
+  1543 "@ Tattvas"->"8 Tattvas" | 1567 "Verses 2326 pronounces"->"Verse 2326" | 1613 "Tat Tvam கதம்"->"Tat Tvam Asi"
+  1615 stray "T3" catchword | 1622 trailing "ட்" glyph | 1677 "17௦0ம் (2488" garbled term
+  1692 "is 116. seed"->"is the seed" | 1708 "2537 to 25245"->"2537 to 2544?" | 1731 "(263 to 2634)"->"(2633 to 2634)?"
+  1766 "(2487 to 2863)"->"(2835 to 2863)?"
+
+================================================================================
+LAYOUT ARTIFACTS TO STRIP (all ranges)
+================================================================================
+Page-break banners ("===", "--- Page N ---") and running headers to delete:
+  352-355, 486-489, 612-615, 617(leading प्र), 692(leading ना), 744-747, 782(leading glyph),
+  876-879, 1004-1007, 1072(floating "Saivam"), 1136-1139, 1203-1204, 1264, 1267-1270,
+  1406-1409, 1474, 1547-1550, 1615, 1683-1686, 1811-1813, 1819-1827.
+Keep as REAL content: 1814-1816 internal title page ("TIRUMANTIRAM / A Tamil scriptural Classic").
+
+================================================================================
+CROSS-CUTTING ISSUES FOR UMA
+================================================================================
+1. Tantra roman numerals in the Introduction are off by one in several headers
+   (printed IV/V/VI/VII drift) — see lines 899, 983, 1066, 1102. Worth a consistency pass.
+2. Several parenthetical VERSE-REFERENCE NUMBERS look internally inconsistent
+   (1366, 1382, 1708, 1731, 1766). These can only be confirmed against the printed book.
+3. "Mamaya" (Prologue 1924) pure/impure term — unresolved.
