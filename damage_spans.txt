@@ -8,8 +8,8 @@
 244-248	Tantra One	DONE(Tantra One full re-align)
 263-269	Tantra One	DONE(Tantra One full re-align)
 274-279	Tantra One	DONE(Tantra One full re-align)
-373-377	Tantra Two	TODO
-405-409	Tantra Two	TODO
+373-377	Tantra Two	DONE(T2 +11 mechanical shift)
+405-409	Tantra Two	DONE(T2 +11 mechanical shift)
 579-583	Tantra Three	TODO
 589-593	Tantra Three	TODO
 640-644	Tantra Three	TODO

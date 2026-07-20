@@ -63,6 +63,41 @@ Also available
    render ... --dpi 300                   # higher resolution (default 200)
 
 
+Re-aligning a drifted Tantra (fixing wrong English on a verse)
+--------------------------------------------------------------
+
+Some ranges have DRIFT: the English is coherent but sits on the WRONG verse
+(e.g. verse 217 showed verse 222's translation). To fix a Tantra:
+
+1. Render its pages (see offset above) and scaffold it:
+       python3 extract_verses.py render --first <P1> --last <P2>
+       python3 extract_verses.py scaffold --tantra "Tantra Two"
+
+2. THE KEY RULE for reading the Natarajan book. Each verse is printed as:
+       [Tamil verse lines] [printed number] [English title] [translation] [commentary]
+   i.e. the number sits with the Tamil, and the English BELOW a number
+   belongs to THAT number. So: for verse N, find the Tamil block ending in
+   "N", and take the English (title + translation + any commentary block that
+   follows, above the next Tamil) as verse N's English.
+
+3. Do NOT trust the scaffold's existing english_* values in a drifted range —
+   they may belong to another verse. Overwrite them from the book, matching by
+   the printed number. The JSON `tamil` is already correct, so you can sanity-
+   check: the meaning of the English you write should match that verse's Tamil.
+
+4. Commentary blocks (set off by a short horizontal rule) go into `notes`.
+   Many verses have none -> leave notes "".
+
+5. Apply and verify:
+       python3 extract_verses.py apply --in tantra_two.json
+
+   apply refuses to write unless all 3 files still parse at 3070 entries, and
+   backs each up first. Safe to run repeatedly as you fill the file in sittings.
+
+Tip: `extract_verses.py tantras` lists every Tantra's verse range; the fix_*.json
+files already in the repo are worked examples of the format for Tantra One.
+
+
 Housekeeping
 ------------
 
