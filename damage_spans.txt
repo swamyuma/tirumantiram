@@ -10,16 +10,16 @@
 274-279	Tantra One	DONE(Tantra One full re-align)
 373-377	Tantra Two	DONE(T2 +11 mechanical shift)
 405-409	Tantra Two	DONE(T2 +11 mechanical shift)
-579-583	Tantra Three	TODO
-589-593	Tantra Three	TODO
-640-644	Tantra Three	TODO
-655-659	Tantra Three	TODO
-664-671	Tantra Three	TODO
-686-690	Tantra Three	TODO
-699-703	Tantra Three	TODO
-815-819	Tantra Three	TODO
-824-828	Tantra Three	TODO
-866-873	Tantra Three	TODO
+579-583	Tantra Three	DONE(T3 +11 shift, git seam)
+589-593	Tantra Three	DONE(T3 +11 shift, git seam)
+640-644	Tantra Three	DONE(T3 +11 shift, git seam)
+655-659	Tantra Three	DONE(T3 +11 shift, git seam)
+664-671	Tantra Three	DONE(T3 +11 shift, git seam)
+686-690	Tantra Three	DONE(T3 +11 shift, git seam)
+699-703	Tantra Three	DONE(T3 +11 shift, git seam)
+815-819	Tantra Three	DONE(T3 +11 shift, git seam)
+824-828	Tantra Three	DONE(T3 +11 shift, git seam)
+866-873	Tantra Three	DONE(T3 +11 shift, git seam)
 892-896	Tantra Four	TODO
 919-924	Tantra Four	TODO
 941-947	Tantra Four	TODO
