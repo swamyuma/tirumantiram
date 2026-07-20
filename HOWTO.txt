@@ -1,0 +1,71 @@
+Thirumanthiram verse re-extraction — HOWTO
+===========================================
+
+Tool: extract_verses.py  (Python 3, runs in WSL; needs pdftoppm + node, both present)
+Goal: repair the English (title + translation) for verses, one Tantra at a time,
+      reading the correct text off the Natarajan PDF pages by eye.
+      Tamil is already clean (Project Madurai) — do NOT change it.
+
+All commands run from the project folder inside WSL:
+
+    cd "/mnt/c/Users/umasu/Documents/gate-files/tnarch-downloads/tirumantiram"
+
+(From PowerShell instead, prefix each with `wsl`, e.g. `wsl python3 extract_verses.py tantras`.
+ Use plain filenames like tantra_two.json — never /tmp/... paths, Git Bash rewrites them.)
+
+
+Per-Tantra workflow
+-------------------
+
+1. List the Tantras and their verse ranges/counts:
+
+       python3 extract_verses.py tantras
+
+2. Dump ALL verses of one Tantra into an editable file (auto-named, e.g. tantra_two.json):
+
+       python3 extract_verses.py scaffold --tantra "Tantra Two"
+
+3. Render that Tantra's pages, a chunk at a time, so you can read them:
+
+       python3 extract_verses.py render --printed --first 60 --last 70
+
+   - `--printed` means you gave printed page numbers; it adds the +22 offset for you.
+     (verse 0 is printed page 3 == physical page 25. Physical page N == printed page N-22.)
+   - PNGs land in ./_pages/ ; the Windows paths are printed so you can open them.
+   - The book prints each Tantra's heading — page forward until you see it.
+
+4. Edit the JSON file. For each verse read off the page:
+   - `english_title`       <- the verse's heading/title
+   - `english_translation` <- the verse translation (the numbered stanza)
+   - `notes`               <- Natarajan's commentary block printed BELOW the verse,
+                              if any (roughly 1 verse in 7 has it). Leave "" when the
+                              page shows no commentary for that verse.
+   - Leave `verse_number` and `tamil` alone.
+   - `\n` = line break inside a field, `\"` = a literal quote.
+   - Delete any field you don't want to change — only fields left in the file get written.
+
+5. Apply to index.html, flipbook.html AND thirumanthiram_verses.json, verified:
+
+       python3 extract_verses.py apply --in tantra_two.json
+
+   - Makes a timestamped .bak of each file first.
+   - Refuses to write anything unless every verse/field is found and each file still
+     parses with the entry count unchanged (3070). A failed run leaves files untouched.
+   - Safe to run repeatedly on the same file (fill a Tantra over several sittings).
+
+
+Also available
+--------------
+
+   scaffold --from 151 --to 165          # a plain verse range instead of a whole Tantra
+   scaffold --tantra "..." --out foo.json # choose the output filename
+   render --first 67 --last 68            # physical page numbers (no offset)
+   render ... --dpi 300                   # higher resolution (default 200)
+
+
+Housekeeping
+------------
+
+   - Old *.bak files pile up with repeated applies; delete them once a Tantra is
+     committed to git.
+   - _pages/ holds rendered PNGs; safe to delete anytime.

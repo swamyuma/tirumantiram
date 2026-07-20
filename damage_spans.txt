@@ -1,0 +1,94 @@
+# damaged spans (suspect verses + gap<=4 merge + -/+2 buffer)
+# status: TODO | DONE
+13-17	Payiram	TODO
+81-85	Payiram	TODO
+152-156	Tantra One	DONE(Tantra One full re-align)
+211-215	Tantra One	DONE(211-223 fix, pp.33-34)
+217-222	Tantra One	DONE(211-223 fix, pp.33-34)
+244-248	Tantra One	DONE(Tantra One full re-align)
+263-269	Tantra One	DONE(Tantra One full re-align)
+274-279	Tantra One	DONE(Tantra One full re-align)
+373-377	Tantra Two	TODO
+405-409	Tantra Two	TODO
+579-583	Tantra Three	TODO
+589-593	Tantra Three	TODO
+640-644	Tantra Three	TODO
+655-659	Tantra Three	TODO
+664-671	Tantra Three	TODO
+686-690	Tantra Three	TODO
+699-703	Tantra Three	TODO
+815-819	Tantra Three	TODO
+824-828	Tantra Three	TODO
+866-873	Tantra Three	TODO
+892-896	Tantra Four	TODO
+919-924	Tantra Four	TODO
+941-947	Tantra Four	TODO
+952-956	Tantra Four	TODO
+973-978	Tantra Four	TODO
+1035-1039	Tantra Four	TODO
+1040-1044	Tantra Four	TODO
+1064-1073	Tantra Four	TODO
+1074-1078	Tantra Four	TODO
+1109-1113	Tantra Four	TODO
+1125-1131	Tantra Four	TODO
+1144-1148	Tantra Four	TODO
+1225-1229	Tantra Four	TODO
+1247-1251	Tantra Four	TODO
+1257-1261	Tantra Four	TODO
+1308-1312	Tantra Four	TODO
+1347-1351	Tantra Four	TODO
+1354-1358	Tantra Four	TODO
+1365-1369	Tantra Four	TODO
+1381-1385	Tantra Four	TODO
+1395-1399	Tantra Four	TODO
+1426-1430	Tantra Five	TODO
+1493-1497	Tantra Five	TODO
+1521-1527	Tantra Five	TODO
+1534-1538	Tantra Five	TODO
+1590-1594	Tantra Six	TODO
+1641-1645	Tantra Six	TODO
+1659-1663	Tantra Six	TODO
+1665-1669	Tantra Six	TODO
+1727-1737	Tantra Seven	TODO
+1752-1756	Tantra Seven	TODO
+1767-1771	Tantra Seven	TODO
+1788-1792	Tantra Seven	TODO
+1793-1797	Tantra Seven	TODO
+1827-1834	Tantra Seven	TODO
+1851-1856	Tantra Seven	TODO
+1857-1861	Tantra Seven	TODO
+2008-2012	Tantra Seven	TODO
+2031-2035	Tantra Seven	TODO
+2058-2062	Tantra Seven	TODO
+2106-2110	Tantra Seven	TODO
+2111-2115	Tantra Seven	TODO
+2147-2151	Tantra Eight	TODO
+2153-2157	Tantra Eight	TODO
+2158-2163	Tantra Eight	TODO
+2178-2185	Tantra Eight	TODO
+2191-2195	Tantra Eight	TODO
+2210-2214	Tantra Eight	TODO
+2270-2274	Tantra Eight	TODO
+2334-2338	Tantra Eight	TODO
+2360-2364	Tantra Eight	TODO
+2379-2383	Tantra Eight	TODO
+2412-2416	Tantra Eight	TODO
+2452-2457	Tantra Eight	TODO
+2470-2474	Tantra Eight	TODO
+2514-2518	Tantra Eight	TODO
+2553-2557	Tantra Eight	TODO
+2588-2592	Tantra Eight	TODO
+2631-2641	Tantra Eight	TODO
+2657-2661	Tantra Nine	TODO
+2673-2679	Tantra Nine	TODO
+2698-2702	Tantra Nine	TODO
+2720-2724	Tantra Nine	TODO
+2741-2748	Tantra Nine	TODO
+2781-2785	Tantra Nine	TODO
+2814-2818	Tantra Nine	TODO
+2840-2846	Tantra Nine	TODO
+2847-2851	Tantra Nine	TODO
+2877-2881	Tantra Nine	TODO
+2894-2898	Tantra Nine	TODO
+2978-2982	Tantra Nine	TODO
+3042-3047	Tantra Nine	TODO

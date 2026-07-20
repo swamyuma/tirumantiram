@@ -1,1 +1,5 @@
 Thirumanthiram_English_Natarajan_Archive.pdf
+_pages/
+__pycache__/
+*.bak
+build_*.py
