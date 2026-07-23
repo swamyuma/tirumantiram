@@ -45,10 +45,10 @@
 1493-1497	Tantra Five	DONE(4 garbage verses re-read, commit 749956f)
 1521-1527	Tantra Five	DONE(4 garbage verses re-read, commit 749956f)
 1534-1538	Tantra Five	DONE(4 garbage verses re-read, commit 749956f)
-1590-1594	Tantra Six	TODO
-1641-1645	Tantra Six	TODO
-1659-1663	Tantra Six	TODO
-1665-1669	Tantra Six	TODO
+1590-1594	Tantra Six	DONE(4 garbage verses re-read from pp.257-261, 2026-07-22)
+1641-1645	Tantra Six	DONE(4 garbage verses re-read from pp.257-261, 2026-07-22)
+1659-1663	Tantra Six	DONE(4 garbage verses re-read from pp.257-261, 2026-07-22)
+1665-1669	Tantra Six	DONE(4 garbage verses re-read from pp.257-261, 2026-07-22)
 1727-1737	Tantra Seven	TODO
 1752-1756	Tantra Seven	TODO
 1767-1771	Tantra Seven	TODO
