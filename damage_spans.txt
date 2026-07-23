@@ -49,19 +49,19 @@
 1641-1645	Tantra Six	DONE(4 garbage verses re-read from pp.257-261, 2026-07-22)
 1659-1663	Tantra Six	DONE(4 garbage verses re-read from pp.257-261, 2026-07-22)
 1665-1669	Tantra Six	DONE(4 garbage verses re-read from pp.257-261, 2026-07-22)
-1727-1737	Tantra Seven	TODO
-1752-1756	Tantra Seven	TODO
-1767-1771	Tantra Seven	TODO
-1788-1792	Tantra Seven	TODO
-1793-1797	Tantra Seven	TODO
-1827-1834	Tantra Seven	TODO
-1851-1856	Tantra Seven	TODO
-1857-1861	Tantra Seven	TODO
-2008-2012	Tantra Seven	TODO
-2031-2035	Tantra Seven	TODO
-2058-2062	Tantra Seven	TODO
-2106-2110	Tantra Seven	TODO
-2111-2115	Tantra Seven	TODO
+1727-1737	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+1752-1756	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+1767-1771	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+1788-1792	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+1793-1797	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+1827-1834	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+1851-1856	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+1857-1861	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+2008-2012	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+2031-2035	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+2058-2062	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+2106-2110	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
+2111-2115	Tantra Seven	DONE(16 garbage verses re-read via subagents, 2026-07-22)
 2147-2151	Tantra Eight	TODO
 2153-2157	Tantra Eight	TODO
 2158-2163	Tantra Eight	TODO
