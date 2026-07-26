@@ -3,3 +3,11 @@ _pages/
 __pycache__/
 *.bak
 build_*.py
+_align
+backup/
+backup/*md
+backup/*json
+jsons/
+*_parts/
+*md
+
