@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantric Cult of South India — Tirumandiram (pp. 46–64)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --ink:#100b06; --ink-2:#1b130b; --walnut:#241a10; --gild:#cba25a; --gild-lit:#e8c877;
+            --gild-deep:#8f6d33; --cream:#f0e4cc; --cream-dim:#b9a888; --kumkum:#b5432a; --line:#4a3a24;
+            --font-inscr:'Cinzel', serif; --font-body:'EB Garamond','Cormorant Garamond',serif;
+            --font-tamil:'Noto Serif Tamil', serif;
+        }
+        *{box-sizing:border-box;}
+        body{margin:0;font-family:var(--font-body);color:var(--cream);
+            background:radial-gradient(120% 90% at 50% 8%, #2a1d10 0%, var(--ink-2) 42%, var(--ink) 100%);
+            min-height:100vh;}
+        ::selection{background:rgba(203,162,90,.28);}
+        button,select{font-family:inherit;cursor:pointer;}
+
+        /* Masthead — same idiom as index.html */
+        header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 26px;
+            background:linear-gradient(180deg, rgba(15,10,6,.96), rgba(15,10,6,.82));
+            border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60;flex-wrap:wrap;
+            backdrop-filter:blur(3px);}
+        .brand{display:flex;align-items:center;gap:14px;min-width:0;}
+        .brand-mark{width:34px;height:34px;flex:none;color:var(--gild);opacity:.9;}
+        .brand-name{font-family:var(--font-inscr);font-weight:600;letter-spacing:.14em;font-size:1.05rem;color:var(--gild-lit);}
+        .brand-sub{font-style:italic;color:var(--cream-dim);font-size:.95rem;border-left:1px solid var(--line);padding-left:14px;}
+        .tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+        .field{display:flex;align-items:center;gap:6px;background:linear-gradient(180deg,var(--walnut),#1d1409);
+            border:1px solid var(--line);border-radius:3px;padding:3px 4px;}
+        select{background:transparent;color:var(--cream);border:none;outline:none;font-size:1rem;padding:5px 20px 5px 6px;appearance:none;
+            background-image:linear-gradient(45deg,transparent 50%,var(--gild) 50%),linear-gradient(135deg,var(--gild) 50%,transparent 50%);
+            background-position:calc(100% - 11px) 55%,calc(100% - 6px) 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat;}
+        select option{background:var(--walnut);color:var(--cream);}
+        .btn{background:linear-gradient(180deg,#33260f,#241a10);color:var(--gild-lit);border:1px solid var(--line);
+            border-radius:3px;padding:7px 11px;font-family:var(--font-inscr);font-size:.72rem;letter-spacing:.1em;transition:border-color .2s,color .2s;}
+        .btn:hover{border-color:var(--gild);color:#fff;}
+
+        /* Title block */
+        .frontis{max-width:44rem;margin:0 auto;padding:9vh 26px 6vh;text-align:center;}
+        .frontis h1{font-family:var(--font-inscr);font-weight:600;font-size:clamp(1.6rem,3.4vw,2.5rem);
+            letter-spacing:.12em;line-height:1.2;color:var(--gild-lit);margin:0;}
+        .frontis .sub{font-style:italic;color:var(--cream-dim);font-size:1.1rem;margin-top:16px;}
+        .frontis .rule{width:min(70%,300px);height:1px;margin:30px auto;
+            background:linear-gradient(90deg,transparent,var(--gild),transparent);}
+        .frontis .prov{font-family:var(--font-inscr);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+            color:var(--gild-deep);line-height:2.1;}
+
+        /* Page sheets */
+        main{max-width:52rem;margin:0 auto;padding:0 22px 12vh;}
+        .pg{position:relative;margin:0 0 34px;padding:clamp(30px,4vh,52px) clamp(26px,4vw,58px) 40px;
+            background:radial-gradient(90% 70% at 30% 12%, #2c2013 0%, var(--walnut) 58%, #1d1409 100%);
+            border:1px solid #3a2b19;border-radius:4px;box-shadow:0 22px 50px rgba(0,0,0,.55);scroll-margin-top:84px;}
+        .pg::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px 0 0 4px;
+            background:linear-gradient(var(--gild-lit),var(--gild-deep),var(--gild-lit));opacity:.5;}
+        .pg-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:26px;flex-wrap:wrap;}
+        .runhead{font-family:var(--font-inscr);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+            color:var(--gild);opacity:.85;}
+        .folio{font-family:var(--font-inscr);font-size:.8rem;letter-spacing:.1em;color:var(--gild-lit);white-space:nowrap;}
+        .folio .src{color:var(--gild-deep);font-size:.66rem;letter-spacing:.12em;margin-left:8px;}
+        .pg-head-rule{flex:1 1 60px;height:1px;background:linear-gradient(90deg,var(--gild-deep),transparent);align-self:center;min-width:30px;}
+
+        h2{font-family:var(--font-inscr);font-weight:600;font-size:1.02rem;letter-spacing:.14em;text-transform:uppercase;
+            color:var(--gild-lit);margin:34px 0 14px;}
+        h3{font-family:var(--font-inscr);font-weight:500;font-size:.94rem;letter-spacing:.05em;
+            color:var(--gild-lit);margin:30px 0 12px;}
+        h2:first-of-type,h3:first-of-type{margin-top:0;}
+        p{font-size:1.14rem;line-height:1.82;margin:0 0 1.05em;}
+        p:last-child{margin-bottom:0;}
+        .cont{color:var(--cream-dim);}
+        .cont::before{content:"… ";color:var(--gild-deep);}
+
+        .tamil{font-family:var(--font-tamil);font-size:1.06rem;line-height:2.1;color:#fbf3df;font-weight:500;
+            margin:22px 0;padding:16px 20px;border-left:2px solid var(--gild-deep);background:rgba(0,0,0,.16);white-space:pre-line;}
+        .tamil .ref{display:block;font-family:var(--font-body);font-style:italic;font-size:.95rem;
+            color:var(--cream-dim);margin-top:10px;}
+        .translit{font-style:italic;color:#f4ead0;font-size:1.06rem;line-height:1.7;margin:-8px 0 20px;padding-left:20px;}
+
+        ul.names{columns:3;column-gap:26px;list-style:none;padding:0;margin:18px 0 4px;font-size:1.02rem;line-height:1.9;}
+        ul.names li{break-inside:avoid;}
+        ol.weapons{columns:2;column-gap:30px;margin:18px 0;padding-left:1.6em;font-size:1.02rem;line-height:1.85;}
+        ol.weapons li{break-inside:avoid;}
+        ol.chapters{margin:16px 0;padding-left:1.6em;font-size:1.06rem;line-height:1.85;}
+
+        .notes{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:.96rem;line-height:1.7;color:var(--cream-dim);}
+        .notes-label{font-family:var(--font-inscr);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+            color:var(--gild-deep);display:block;margin-bottom:8px;}
+        .notes ol{margin:0;padding-left:1.5em;}
+        .notes li{margin-bottom:4px;}
+        /* footnote links */
+        a.fnref{text-decoration:none;color:var(--gild-lit);scroll-margin-top:92px;padding:0 1px;}
+        a.fnref:hover{color:#fff;}
+        a.fnref sup{font-size:.72em;font-weight:600;}
+        a.fnback{text-decoration:none;color:var(--gild-lit);margin-left:9px;font-size:1.02em;line-height:1;
+            display:inline-block;padding:1px 7px;border:1px solid var(--line);border-radius:3px;
+            background:linear-gradient(180deg,#33260f,#241a10);vertical-align:baseline;}
+        a.fnback:hover{color:#fff;border-color:var(--gild);}
+        /* landing flash — works even when the scroll distance is small */
+        .fn-flash{animation:fnflash 1.5s ease-out 1;}
+        @keyframes fnflash{
+            0%{background:rgba(203,162,90,.55);box-shadow:0 0 0 5px rgba(203,162,90,.45);}
+            100%{background:transparent;box-shadow:0 0 0 5px rgba(203,162,90,0);}
+        }
+        .notes li{scroll-margin-top:92px;}
+        a.fnref:target,.notes li:target{background:rgba(203,162,90,.17);border-radius:2px;
+            box-shadow:0 0 0 3px rgba(203,162,90,.17);}
+        .notes li:target{color:var(--cream);}
+
+        footer{border-top:1px solid var(--line);padding:26px;text-align:center;color:var(--cream-dim);font-size:.92rem;font-style:italic;}
+        .top{position:fixed;right:20px;bottom:20px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+            background:rgba(28,20,11,.85);border:1px solid var(--line);color:var(--gild);font-size:1.2rem;
+            text-decoration:none;backdrop-filter:blur(2px);z-index:50;}
+        .top:hover{border-color:var(--gild);color:var(--gild-lit);}
+        @media (max-width:640px){ ul.names{columns:2;} ol.weapons{columns:1;} .frontis{padding-top:6vh;} }
+        @media print{ body{background:#fff;color:#000;} header,.top{display:none;} .pg{box-shadow:none;background:#fff;border-color:#ccc;} }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><polygon points="50,14 82,68 18,68"/><polygon points="50,86 18,32 82,32"/><circle cx="50" cy="50" r="14"/></g></svg>
+        <div>
+            <div class="brand-name">Tantric Cult of South India</div>
+        </div>
+        <div class="brand-sub">The Tirumandiram chapter · pp. 46–64</div>
+    </div>
+    <div class="tools">
+        <div class="field">
+            <select id="jump" aria-label="Jump to page">
+                <option value="">— Jump to page —</option>
+            </select>
+        </div>
+        <button class="btn" id="toggle-notes">Hide Footnotes</button>
+    </div>
+</header>
+
+<div class="frontis">
+    <h1>Tirumandiram</h1>
+    <div class="sub">From <em>Tantric Cult of South India</em> — the chapter “Tantrism in Tamil Devotional Literature”</div>
+    <div class="rule"></div>
+    <div class="prov">
+        Printed pages 46 – 64<br>
+        Assembled from OCR text · page_062.txt – page_080.txt<br>
+        Scan source: University of Michigan
+    </div>
+</div>
+
+<main>
+
+<!-- ============ p.46 ============ -->
+<section class="pg" id="p46">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">46<span class="src">page_062</span></span></div>
+    <h2>Tirumandiram</h2>
+    <p>One of the most remarkable works of Sastric nature in Tamil language is Tirumandiram<a class="fnref" id="fnref-p46-1" href="#fn-p46-1"><sup>1</sup></a> by Tirumula deva. The work consisting of 3000 verses under nine chapter called Tantras, is also called Tirumandira mālā and is included as the tenth book in the Saiva canon. Tirumuladeva was probably a cowherd and his life as usual is wrapped in a mystic legend. As he is mentioned by Cekkiḻār, he should be assigned to a period earlier them 12th century. His work is full of mystic utterences based on Tantras and has not been subjected to modern critical studies. S. Dandapani Desikar, a modern commentator has said that “this work has been studied only with lingustic chauvanism and religious fanaticism and a rational study is yet to be made”. S. Desikar's commentary is valuable and to the extent possible reflects the sense of the poems which are to a great extent still obscure.</p>
+    <p>“Tirumular gives out the experience both in a classical language and of the masses; the ecstatic outpourings of a siddha are also there in his work. These three elements perhaps tend to make his poetry uneven and a little obscure in places although the overwhelming ecstacy of experience and the flash of brilliance are always present.”<a class="fnref" id="fnref-p46-2" href="#fn-p46-2"><sup>2</sup></a></p>
+
+    <h3>The Author</h3>
+    <p>A glimpse into the life of Tirumular, is got from his own works and also the tradition preserved in Sekkilar's Periyapuraṇam.</p>
+
+    <h3>Sundaranatha</h3>
+    <p>The original name of Tirumülar seems to be Sundaranatha.<a class="fnref" id="fnref-p46-3" href="#fn-p46-3"><sup>3</sup></a></p>
+    <div class="tamil">தந்திரம் ஒன்பது சார்வு மூவாயிரம்
+சுந்தரன் ஆகமச் சொன் மொழிந்தானே.<span class="ref">(வரிகள் : 101)</span></div>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p46-1">“Thirumandiram”, a. Saiva Siddhanda Publishing Society, Madras. b. Tiruvavaduturai Ed. c. Saiva Siddhanda Samajan Publication. <a class="fnback" href="#fnref-p46-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p46-2">‘An Introduction to history of Tamil Literature’, by M. Arunachalam, Madras, 1974, P. 144. <a class="fnback" href="#fnref-p46-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p46-3">Tirumandiram, verse 101. <a class="fnback" href="#fnref-p46-3" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.47 ============ -->
+<section class="pg" id="p47">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">47<span class="src">page_063</span></span></div>
+
+    <p>In the work “Mantra three hundred” the name Sundaranatha is specifically mentioned:</p>
+    <div class="tamil">மந்திரங் கொண்டு வழிபடுவோர்க்கு
+சுந்தரநாதன் சொல்லிய மந்திரம்.</div>
+    <p>It is evident that the original name of this saint was Sundaranatha.</p>
+
+    <h3>The Legend</h3>
+    <p>“With a desire to meet sage Agastya, Sundaranatha came to Tamil Nadu, from north Kailasa, after crossing Kedara, Nepāla, Avimukta and other places. When he came to Sattanur near Tiruvaḍuturai, he found the cowherd Tirumulan lying dead and his cows crying pitifully near him. Out of compassion for them, Sundaranatha left his own body and entered into the body of Mūlaṉ. Subsequently his own body was lost and he had to remain in the body of Mūlaṉ. Sundaranatha in the body of Mūlaṉ was the author of Tirumandiram”. This is the story<a class="fnref" id="fnref-p47-1" href="#fn-p47-1"><sup>1</sup></a> given by Cekkiḻār in his Periyapurāṇam. Though this is only a legend preserved in tradition it is important for reconstructing the history of the text.</p>
+
+    <h3>Divination</h3>
+    <p>It has been a hoary custom to trace the origin of any religious text to heaven such as Kailasa in the case of Saivism and Vaikunta in the case of Vaishnavism, in order that it may assume sacredness. Further, some mysterious and at the same time divine episodes are narrated to give the origin of any text, a status of authority. Innumerable examples could be cited. It is not in any way different in the case of Tirumandiram and its author. Historions have, however, to confine themselves to realities.</p>
+    <p>In the case of Tirumūlar two facts stand out prominently. As Sundaranatha he came from Kailasa, via Kedara and Nepāla. The second, is that he is said to have entered the body of Mūlaṉ. Probably Sundaranatha was the teacher and Mūlaṉ was his disciple. Mūlaṉ so ably put forth the teachings of his master, it was considered that he was none other than Sundaranatha himself.</p>
+    <p>Judging from the expressions of Tirumandiram, it is evident that only a person steeped in Tamil language and tradition could express such subtle and intricate philosophic thoughts in such a mystic language. The tradition that he is a native of Sattanur corraborates the evidence.</p>
+    <p>According Tirumandiram, the nine Tantras constituting this book were based on nine āgamas. It is believed that quite a considerable number of agamas had their origin in South India and what Tirumular tried to synthesize in his work was, the then prevelant belief. Thus it is evident that his work reflects the faiths prevelant in the native region.</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol><li id="fn-p47-1">Tirutondarpurānam, 2: 30: 1:-28. <a class="fnback" href="#fnref-p47-1" title="back to text">&#8617;</a></li></ol>
+    </div>
+</section>
+
+<!-- ============ p.48 ============ -->
+<section class="pg" id="p48">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">48<span class="src">page_064</span></span></div>
+
+    <p>However, in the process of this remarkable synthesis that other incoming ideas were also absorbed cannot be denied. It is in this perspective the advent of Sundaranatha from Kedara and Nepāla to Tamil land, should be viewed.</p>
+
+    <h3>The Nātha Cult</h3>
+    <p>There was a popular sect in northern India, called the Nātha sect, in the medieval period. The followers of Nātha school were votaries of Śiva and Śakti with a strong bias towards Sakta tradition. The origin and development of this sect is not very clear. The following account of the sect in a recent work is worth noting. “On the esoteric cults of Mediaeval India Nathism is important. It is heterodox in character and its followers are still found in different parts of Northern and North eastern India. Once it was also popular in some parts of Maharashtra. Modern Nathism of Punjab, Uttar Pradesh, Nepal and Bihar, has been mixed with the principal existing religions of the said regions, while in Bengal and Assam, the Nātha Yogis want to preserve their seperate identity. The origin of Nathism is covered in mystery. Fragments of mediaeval Nātha literature are preserved in Bengali language, a critical examination of which must show that Nathism was originally a primitive Mother Goddess cult that came into India, from outside.</p>
+    <p>However judging by the north Indian regional literature on the Nātha yogis and the variety of myths and legends connected with them, it would seem that the Nātha movement in its developed form was a north Indian one and that it was amalgamated with the Śakti cult. Their religious discipline was that of hatayoga, which was an article of faith with them. Their objective was to attain the state of Jivan mukti or immortality in life, through the process of Ulta sadhana, that is by making the semen flow upwards instead of downwards and the kaya sadhana that is, by disciplining of physical body they believed that the imperfect body could be transformed into perfect and then into divine which was the only way to overcome decay and death. The right and left nerve channels were designated as the sun and the moon, the former standing for fire or heat and the later for Somarasa, the nectar essance. The sun was identified with Śakti or the female and the moon with Siva or Male”.<a class="fnref" id="fnref-p48-1" href="#fn-p48-1"><sup>1</sup></a></p>
+    <p>“One of the founders of the Nätha cult which in essence was a form of Tantrism, was called Goraksha, the cowherd.”<a class="fnref" id="fnref-p48-2" href="#fn-p48-2"><sup>2</sup></a></p>
+
+    <h3>Tirumūlar — a Follower of Nathism</h3>
+    <p>The fact that Cekkiḻār mentions Kedara and Nepāla as places from where Sundaranatha came to Tamil land shows that those places were held in high esteem by the followers of Sundaranatha. That Tirumular, the author of Tirumandiram was said to have been a cowherd, very closely resemble the Nātha tradition. Tirumūlar himself is called Tirumūlanātha. In the prologue of Tirumandirām, Tirumūlar himself says that he got the name Nātha by the grace of Nandi — Nandi Aruḷaḷe Nāthanām Peyar Peṟṟom.<a class="fnref" id="fnref-p48-3" href="#fn-p48-3"><sup>3</sup></a></p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p48-1">“History of Sakta religion” by N.N. Bhattacharya, 1974, P. 129-30. <a class="fnback" href="#fnref-p48-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p48-2">“Lokayata” by Devi Prasad Cathopadhyaya — pa. <a class="fnback" href="#fnref-p48-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p48-3">Tirumandiram. v. 68. <a class="fnback" href="#fnref-p48-3" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.49 ============ -->
+<section class="pg" id="p49">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">49<span class="src">page_065</span></span></div>
+
+    <div class="tamil">நந்தி அருளாலே நாதனாம் பேர்பெற்றோம்.<span class="ref">(வரிகள் : 68)</span></div>
+    <div class="translit">nanti aruḷālē nātaṉām pērpeṟṟōm</div>
+
+    <p>That Tirumandiram extols the greatness of Śakti is evident in the fourth Tantra which is almost exclusively Śakta in its outlook. That Tirumūlar himself states that he adored Śakti<a class="fnref" id="fnref-p49-1" href="#fn-p49-1"><sup>1</sup></a>:</p>
+    <div class="tamil">புவனாபதியாம் அருந்தவச் செல்வியை
+சேவித்து அடியேன் பரிந்துடன் வந்தனன்.<span class="ref">(வரிகள் : 75)</span></div>
+    <p class="translit">puvanāpathiyām aruntavac celviyai cēvittu aṭiyēṉ parintu uṭaṉ vantaṉaṉ.</p>
+
+    <p>Tirumandiram emphasises yoga, particularly the raising of Kundalini through Iḍā and Pingalā.</p>
+    <p>In this connection another aspect also deserves special mention. Though the Nāthas were Tantric followers they never advocated the Vāmācāra namely <em>pañcha makāras</em><a class="fnref" id="fnref-p49-2" href="#fn-p49-2"><sup>2</sup></a> and the <em>lata sadhana</em><a class="fnref" id="fnref-p49-3" href="#fn-p49-3"><sup>3</sup></a> of the Śaktas. “The Nātha sect never indulged in this type of Śakti worship (Vāmācāra)”.<a class="fnref" id="fnref-p49-4" href="#fn-p49-4"><sup>4</sup></a> Though Tirumandiram speaks so much of Sakta and Bhairava cults it does not advocate the Vāmācāra. It would be clear that a close resemblence exists between the Nātha school and Tirumandiram and that considerable ideas of the sect have permeated and is reflected in legends and thoughts of Tirumūlar.</p>
+
+    <h3>Tamil and Sanskrit</h3>
+    <p>Tirumūlar gives many important facts about the text, teachers and schools to which he belongs. He refers to twenty-eight Saiva Āgamas and also records the tradition that the  Āgamas were taught by Śiva to Uma.<a class="fnref" id="fnref-p49-5" href="#fn-p49-5"><sup>5</sup></a> He asserts that Śiva taught āgamas both in the Tamil and in Sanskrit languages — </p>
+    <div class="tamil">ஆரியமும் தமிழும் உடனே சொல்லி
+காரிகையாருக்கு கருணை செய்தானே.<span class="ref">(வரிகள் : 65)</span></div>
+    <div class="translit">āriyamum tamiḻum uṭaṉē colli kārikaiyārku karuṇai ceitāne.</div>
+    <p>also in — <a class="fnref" id="fnref-p49-6" href="#fn-p49-6"><sup>6</sup></a></p>
+    <div class="translit">tamiḻccol vaṭacol eṉṉum ivviraṇṭum uṇartum avaṇai uṇartalum āme</div>
+    <p>From among the twenty-eight Āgamas, Tirumūlar has drawn from nine Āgamas which he mentions as Karaṇa, Kāmika, Vīra, Chinta, Vātuḷa, Yāmaḷa, Kālottara, Suprabheda and Makuṭa.<a class="fnref" id="fnref-p49-7" href="#fn-p49-7"><sup>7</sup></a></p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p49-1">Tirumandiram, v. 75. <a class="fnback" href="#fnref-p49-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p49-2">
+            <p>Pañca Makāra (Sanskrit: पञ्चमकार), also known as Pañcatattva or "The Five M's," is a Tantric doctrine found especially in Kaula and Vāmācāra traditions. The name derives from five ritual elements whose names begin with the letter "M".
+</p>
+
+<ul>
+    <li><strong>Madya</strong> - wine or alcohol.</li>
+    <li><strong>Māṃsa</strong> - meat.</li>
+    <li><strong>Matsya</strong> - fish.</li>
+    <li><strong>Mudrā</strong> - ritual grain, food offering, or symbolic gesture depending on the tradition.</li>
+    <li><strong>Maithuna</strong> - ritual union.</li>
+</ul>
+<a class="fnback" href="#fnref-p49-2" title="back to text">&#8617;</a></li>
+
+            <li id="fn-p49-3">
+            <p>
+Latā Sādhana (लता साधना) is a practice described in certain Śākta and Kaula
+Tantric traditions. The word <i>latā</i> means "creeper" or "vine" and symbolizes
+the union of Śakti and Śiva. In Tantric literature, Latā Sādhana is often
+associated with the fifth element of Pañca Makāra, but its esoteric purpose is
+the transformation of ordinary consciousness into spiritual realization through
+the experience of the unity of divine energy (Śakti) and pure consciousness
+(Śiva).
+</p>
+<a class="fnback" href="#fnref-p49-3" title="back to text">&#8617;</a></li>
+
+            <li id="fn-p49-4">“Śakti cult in Ancient India” by Pushpendra Kumar, Varanasi, 1974, P. 164. <a class="fnback" href="#fnref-p49-4" title="back to text">&#8617;</a></li>
+            <li id="fn-p49-5">Tirumandiram, v. 165. <a class="fnback" href="#fnref-p49-5" title="back to text">&#8617;</a></li>
+            <li id="fn-p49-6">Ibid., v. 66. <a class="fnback" href="#fnref-p49-6" title="back to text">&#8617;</a></li>
+            <li id="fn-p49-7">Ibid., v. 63. <a class="fnback" href="#fnref-p49-7" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.50 ============ -->
+<section class="pg" id="p50">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">50<span class="src">page_066</span></span></div>
+
+    <h3>The School</h3>
+    <p>In his Guruparampara, Mūlaṉ says that there were originally four disciples of Nātha viz. Sivayogamuni, Patañjali, Vyāgrama and Tirumūlaṉ. They are said to belong to the Nandi group. It is not known whether there was any sub-sect among the Nātha school called the Nandi group. Tirumūlar says that the four obtained the name Nātha by the grace of Nandi.<a class="fnref" id="fnref-p50-1" href="#fn-p50-1"><sup>1</sup></a> (It is of interest to mention that among the Jains, there was a <em>gaṇa</em> called the <em>Nandi-sangha</em>.) Among the Saivaites, the Nandi lineage (Paramparā) was very powerful, Tirumūlar had seven disciples Mālangaṉ, Indraṉ, Somaṉ, Brahmaṉ, Rudraṉ, Kanturu, Kālaṅgi and Kañchamalaiyaṉ.<a class="fnref" id="fnref-p50-2" href="#fn-p50-2"><sup>2</sup></a> Four of his disciples went to the four directions carrying his message. In all probability Mūlaṉ and his disciples assumed the title Deva or Nātha and were probably called, Mālanganatha, Indranatha, Somanatha, Brahmanatha and so on.</p>
+
+    <h3>Śakta Cult</h3>
+    <p>Mūlaṉ says that by the grace of Lord, he is composing this Āgama.<a class="fnref" id="fnref-p50-3" href="#fn-p50-3"><sup>3</sup></a> Thus it is evident that this is an Āgama composed in Tamiḻ, based mainly on the nine Āgamas mentioned earlier. The inclusion of Yāmaḷa and Kālottara, would suggest that Mūlaṉ drew also from Śakta Tantras, which is reflected to a very great extent in the text. In fact, Mūlaṉ says that he adored the lotus feet of that great Goddess of Penance Bhuvanāpati.<a class="fnref" id="fnref-p50-4" href="#fn-p50-4"><sup>4</sup></a> He further says that he has come to expound the cosmic dance of the Devi who is (Sacchidananda svarūpi), Niratisayananda svarūpi, and who is said to have removed his cycle of birth.<a class="fnref" id="fnref-p50-5" href="#fn-p50-5"><sup>5</sup></a></p>
+
+    <h3>The Nine Tantras</h3>
+    <p>Of the nine sections called Tantras, the first Tantra deals with <em>upadeśa</em>, the transitory nature of wealth and the physical body, etc., the greatness of non-violence, refraining from drinking intoxicants, etc.; the second gives the esoteric meanings of some of the manifestations of Śiva, such as Aṣṭa Vīraṭṭa, Liṅgapurāṇa, Pañcakritya, etc.; the third with Aṣṭanga Yoga and Aṣṭasiddhi; fourth with Ambala Chakra, Bhairavi Mantram, etc.; the Carya, Kriya, yoga and Jñāna are dealt with in the fifth, while in the sixth Tapoveṣa, Jñānaveṣa, Guru Darśana are dealt with; the seventh has the six Adhāras, Sivapūja, Gurupūja, etc., as its topic. The removal of desires, greatness of Bhakti etc., are dealt with in 8th, while in the last, are detailed Pañcākṣara and Siva-darśana.</p>
+
+    <h3>An Original Contribution</h3>
+    <p>It may be seen, from the above that the Tirumandiram does not follow the four fold division of the  Āgamas as Caryakanda, Kriyakanda, Yogakanda and Jñānakāṇḍa. </p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p50-1">Tirumandiram, v. 68. <a class="fnback" href="#fnref-p50-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p50-2">Ibid., v. 69. <a class="fnback" href="#fnref-p50-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p50-3">Ibid., v. 70. <a class="fnback" href="#fnref-p50-3" title="back to text">&#8617;</a></li>
+            <li id="fn-p50-4">Ibid., v. 75. <a class="fnback" href="#fnref-p50-4" title="back to text">&#8617;</a></li>
+            <li id="fn-p50-5">Ibid., v. 78. <a class="fnback" href="#fnref-p50-5" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.51 ============ -->
+<section class="pg" id="p51">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">51<span class="src">page_067</span></span></div>
+
+    <p class="cont">Nor does it deal with the process of installation, etc., which are elaborately dealt with in the Āgamas. It does refer to various forms of fire offerings, the construction of altars (<em>Kuṇḍas</em>) etc., but in every case it emphasises the esoteric significance and in that sense is an original contribution. As it has drawn from various texts of Āgamas, its massage is not unitary in character, but has paths prescribed for various followers. But it does emphasise to a very great extent the yogic path of raising Kundalini Śakti to Sahasrāra. This is essentially Yoga-Jñānamarga and is not the Bakti cult in the ordinary sense.</p>
+    <p>The descriprion of Śakti's <em>kunḍās</em>, <em>mantras</em>, <em>yantras</em>, and their <em>bījākṣaras</em> as given in this text are so remarkable, one would immediately treat this as a  Śākta text per excellance, in Tamiḻ.</p>
+    <p>The text in its elaborate descriptions, does not mention the <em>pañca-makāras</em>, and <em>latā sādhana</em> which shows that it is the Dakṣiṇa school. In fact, Tirumūlar decries the taking of intoxicants and meat. There is no reference to <em>matsya</em> at all. Though <em>maithuna</em> is refered to, it is always in its esoteric sense. This shows that here is a Śakta school, having all the aspects of the other Śakta schools but without the Vāmamārga.</p>
+    <p>We list below the names of Parāśakti as mentioned in this text to show the Śakta traditions:</p>
+
+    <ul class="names">
+        <li>Adi Bhairavi</li><li>Agocari</li><li>Abhirami</li><li>Ashta Śakti</li>
+        <li>Anandamohini</li><li>Antari</li><li>Candika Sulini</li><li>Sukhaparasundari</li>
+        <li>Māmāya</li><li>Maya</li><li>Kanya</li><li>Kriyasakti</li>
+        <li>Karani</li><li>Mohini</li><li>Manonmani</li><li>Māsakti</li>
+        <li>Karishani</li><li>Jnanasakti</li><li>Tripura Bhairavi</li><li>Tatvanayaki</li>
+        <li>Tripurasundari</li><li>Suddha</li><li>Suhodaya</li><li>Sindhuraparipura</li>
+        <li>Sambavi Yogini</li><li>Narani</li><li>Nisacari</li><li>Nili</li>
+        <li>Navasakti</li><li>Vairavi</li><li>Varahamukhi</li><li>Vaikhari</li>
+        <li>Vaindhavi</li><li>Parabindu</li><li>Parasakti</li><li>Parāvidya</li>
+        <li>Omkari</li>
+    </ul>
+</section>
+
+<!-- ============ p.52 ============ -->
+<section class="pg" id="p52">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">52<span class="src">page_068</span></span></div>
+
+    <h3>Vāmācāra Condemned</h3>
+    <p>Tirumūlar strongly denounces the eating of meat, drinks, lust, licing, murder, etc.<a class="fnref" id="fnref-p52-1" href="#fn-p52-1"><sup>1</sup></a> Obviously in this text, madhu and mamsa were not approved. Malar also strongly condemns cohabitation with others wife. He also denounces those who advocates sexual union as a source of emancipation. Mular advocates Vedic yagñas of saumya order and at the same time recommends, like the Vedantins, the discarding of Karma and Niyama.</p>
+    <p>Tirumūlar also squarely condemns Vämächāra.<a class="fnref" id="fnref-p52-2" href="#fn-p52-2"><sup>2</sup></a> The Vamins are said to waste their life in drinking liquor and sexual indulgence. He also refers to those who drink intoxicants, to attain Śakti.<a class="fnref" id="fnref-p52-3" href="#fn-p52-3"><sup>3</sup></a></p>
+
+    <h3>Fourth Tantra — A Sakta Section</h3>
+    <p>The fourth Tantra of Tirumandiram is the most important and is considered the central teaching of the whole text. It carries 535 verses in thirteen chapters viz.,</p>
+    <ol class="chapters">
+        <li>Ajapā</li>
+        <li>Tiru Ambala Cakra</li>
+        <li>Arcchana</li>
+        <li>Tripura Cakra</li>
+        <li>Navakunda</li>
+        <li>Bhairavi mantra</li>
+        <li>Pūrna Šakti</li>
+        <li>Adhāra Adhēya</li>
+        <li>Eroli Cakra</li>
+        <li>Bhairava Cakra</li>
+        <li>Sambavi mandala Cakra</li>
+        <li>Bhuvanapati Cakra, and</li>
+        <li>Navakshari Cakra.</li>
+    </ol>
+    <p>Barring the first four chapters, in all the others, the various aspects of Sakta Tantra namely the mantra, yantra, upasana, māyā, its various forms and the ultimate, supremacy of Śakti are detailed. A careful study of this portion would reveal that this part is a comprehensive treatise on Tantra Sastra of the Saktas. Here Śakti is conceived as the Supreme Goddess (Para devata). The cakra in the human body, the Kundalini Śakti, the mode of awakening her, the various yantras, syllables connected with the appropriate mantras, the nyāsas, the mudras, etc., are discussed in such detail that we begin to feel that we are dealing with a purely Sakta Tantra in excellant Tamil.</p>
+    <p>That the cakras (mystic-diagrams) play a vital role in the Sakta cult is well-known. In the fourth Tantra alone, as many as seven chakras are discussed in different chapters under the heading:</p>
+    <p>Tiru Ambala Cakram, Tripura Cakra, Eroli Cakra, Sambhavi mandala Cakra, Bhairava Cakra, Bhuvanapati Cakra and Navakshart Cakra.</p>
+    <p>Besides the above Bhairavi mantra, Purna Śakti and Adhara Adheya also emphasise the Sakta cult.</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p52-1">Tirumandiram, I. 199. <a class="fnback" href="#fnref-p52-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p52-2">Ibid., 1. 201. <a class="fnback" href="#fnref-p52-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p52-3">Ibid., 1. 332. <a class="fnback" href="#fnref-p52-3" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.53 ============ -->
+<section class="pg" id="p53">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">53<span class="src">page_069</span></span></div>
+
+    <h3>Tripura Cakra</h3>
+    <p>The Devi is called Tripura since she is the presiding deity of the cakra of three kandas. Mahāmāya, Suddhamāyā, Kutila, Bindu and Kundah are synonyms. Asuddhamaya is also called Adhomaya or Mohinimaya. Pranava is the body and grace of Tripura. The six mantras Namah, Vashat, Vaushat, Swaha, Swadha and Humpat are the effects of Pranava. Tripura is Makāmāyā, Maya, Vaindava, Vaikari, Pranava, the six mantra and Jnanasakti. She is also beyond all these.<a class="fnref" id="fnref-p53-1" href="#fn-p53-1"><sup>1</sup></a></p>
+    <p>The following are her other forms. Tripura, Sundari, Antari, Paripura, Narani, Devi of varied colours, Isi and Manōnmani.<a class="fnref" id="fnref-p53-2" href="#fn-p53-2"><sup>2</sup></a> Assuming various forms appropriate to the Gods, Tripura bestows grace. Tripura assumes three forms suited to the three worlds. She bestows knowledge, enjoyment and Liberation jnana, bhoga and moksha as Saraswati, Lakshmi and Śiva. She is white, red and golden in colour and combines in one form all the three aspects.<a class="fnref" id="fnref-p53-3" href="#fn-p53-3"><sup>3</sup></a> (That the Parasakti combines in herself the aspect of Durga, Lakshmi and Saraswati is wellknown).</p>
+    <p>Tripura bestows Nada and Nadanta; She creates the universe as Parābindu; as Pară, Abhirami and Agocari, she bestows grace and Jhana. The Devi wears anklets (nupura) on her legs, red silk as garment and Kundala in her ears. Her breasts are covered by a breast band. As Parasakti holds sugarcane bow, flower arrows, ankuśa and pasa<a class="fnref" id="fnref-p53-4" href="#fn-p53-4"><sup>4</sup></a> (This is generally considered the iconographic description of Rajarajeśvari), wears kandika as a hära around her neck, a jaṭāmakuta with the crescent moon. Her eyes (obviously ball-like) are topped by brows resembling a curved bow. She is also called Candika, with heavy breasts,<a class="fnref" id="fnref-p53-5" href="#fn-p53-5"><sup>5</sup></a> She is Maya, Uma, Śakti, Māparā and Anōrani. There is no god who doesn't adore her, and She is the ultimate penance of all. Brahma, Vishnu, Rudra, Mahesa and Sadasiva cannot function without her. She is Icca, Jnana, Kriya and Ananda Śaktis. Wherever there is Śiva, there she resides as Mahadevi. She is also Dhara Śakti (obvious identification with Vasundhara). As Parasakti she has in her half, Bhogasakti. She is also the deity of Vidya (Sri Vidya). She has ten faces (the 8 directions and the upper and lower regions). She is Manonmani Mangali and the goddess of dance.<a class="fnref" id="fnref-p53-6" href="#fn-p53-6"><sup>6</sup></a></p>
+    <p>There is an interesting manifestation often refered to in this text. The Ardhanari form of Śiva, assumes a puzzling posture, when the Supreme principle is conceived of as Devi; Ardhanari, has one half male and the other half as female. But when the whole is considered a femenine principle, the Saktas speak of the form as a female uniting with a female. This concept is repeated in Tirumandiram. The Devi who stands united with the Umadevi, will bestow moksha. The supreme realisation is called Sivagati and</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p53-1">Tirumandiram, iv. 1045. <a class="fnback" href="#fnref-p53-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p53-2">Ibid., IV. 1047. <a class="fnback" href="#fnref-p53-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p53-3">Ibid., IV. 1048. <a class="fnback" href="#fnref-p53-3" title="back to text">&#8617;</a></li>
+            <li id="fn-p53-4">Ibid., IV. 1059. <a class="fnback" href="#fnref-p53-4" title="back to text">&#8617;</a></li>
+            <li id="fn-p53-5">Ibid., IV. 1061. <a class="fnback" href="#fnref-p53-5" title="back to text">&#8617;</a></li>
+            <li id="fn-p53-6">Ibid., IV. 1063. <a class="fnback" href="#fnref-p53-6" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.54 ============ -->
+<section class="pg" id="p54">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">54<span class="src">page_070</span></span></div>
+
+    <p class="cont">that is bestowed by Śakti who is also called Anandasundari. Parasakti is the body and soul of Śiva (some take it that she is the body and soul of individual self). She bears manuscript on her hand (an obvious identification with Sarasvati). In this aspect she is Manonmani. She has three eyes, and is white in colour. Her seat is white lotus. She is fond of singing Tirumarai, meaning Vedas.<a class="fnref" id="fnref-p54-1" href="#fn-p54-1"><sup>1</sup></a></p>
+    <p>She is Rajarajesvari, weilding pāśa, ankuśa and sugarcane bow.<a class="fnref" id="fnref-p54-2" href="#fn-p54-2"><sup>2</sup></a> She bears Varaha mukha and pestle and plough in her hand.<a class="fnref" id="fnref-p54-3" href="#fn-p54-3"><sup>3</sup></a></p>
+    <p>The Devi, who is the embodiment of pranava, is green in colour; She creates Brahma, Vishnu, Śiva, Isa and Sadasiva and resides in the sound Hrim. She is the Tatpara, the Supreme being.<a class="fnref" id="fnref-p54-4" href="#fn-p54-4"><sup>4</sup></a></p>
+    <p>Thus in the chapter on Tripura cakra, Tripura Bhairavi is considered the Parasakti, the primordeal Being who creates this universe, and is the creator of the five Lords Brahma, Vishnu, Śiva, Isa and Sadasiva. She is Mahalakshmi, Mahāsarasvati, and Mahadevi in one form. Hers are Iccha, Jñana, Kriya and Ananda Śakti. She is the embodiment of Srividya. She is Rajarajesvari, Varahi and Chamunda. The identification of this Tripura with Camunda having curving eyebrows, manifesting anger, and hairs moving up like the flames of fire is clearly the Tantric Bhāvana.<a class="fnref" id="fnref-p54-5" href="#fn-p54-5"><sup>5</sup></a> Her identification with Varahi, holding pestle and plough is also a point worthy of note. She manifests as the sixteen Kalas and is the ultimate Supreme taught by Vedas and other sacred texts. She is also the ultimate support, Adhara of the realised souls. She is Nada as well as Nadanta. If the name of Parasakti is medidated in the lotus seat of heart, the illuminating light will begin to brighten the soul.<a class="fnref" id="fnref-p54-6" href="#fn-p54-6"><sup>6</sup></a></p>
+    <p>Thus this whole chapter is in praise of Tripura-Bhairavi cult.</p>
+
+    <h3>Bhairavi Mantra</h3>
+    <p>The sixth chapter is captioned Bhairavi mantra, which deals with Supreme Bhairavi, Her manifestations as Manonmani, Kali and Nārāyani, the path of internal medidation, antaryaga, the process of controlling breath, the nyāsas to be adopted and the mudras (the signs of hands) to be shown and her different manifestations are detailed in fifty verses.</p>
+    <p><em>Kali</em> — She wears sula, kapāla, nagapāsa and ankusa in her arms and is a part of Śiva (On this description She is Kali). The Devi, red like Agni in colour, wears Surya and Candra as her eyes and Kundala earrings.</p>
+    <p><em>Nārāyani</em> — As Nārāyani she carries sankha and cakra in her hands and wears silambu in her legs.</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p54-1">Tirumandiram, IV. 1066-67. <a class="fnback" href="#fnref-p54-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p54-2">Ibid., IV. 1068. <a class="fnback" href="#fnref-p54-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p54-3">Ibid., IV. 1072. <a class="fnback" href="#fnref-p54-3" title="back to text">&#8617;</a></li>
+            <li id="fn-p54-4">Ibid., IV. 1073. <a class="fnback" href="#fnref-p54-4" title="back to text">&#8617;</a></li>
+            <li id="fn-p54-5">Ibid., IV. 1074. <a class="fnback" href="#fnref-p54-5" title="back to text">&#8617;</a></li>
+            <li id="fn-p54-6">Ibid., IV. 1083. <a class="fnback" href="#fnref-p54-6" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.55 ============ -->
+<section class="pg" id="p55">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">55<span class="src">page_071</span></span></div>
+
+    <p>The Devi as Mahāsakti, manifests in the heart of the devotee as the beginning, middle and end of life. The heart of the devotee is equated to lotus in many verses. But in one verse it is conceived as a kalasa. She is adored by the eight kanyas and sixty four women (Yoginis). To the worshippers of Tripura with Tripuramantra she manifests as Dakshinamurthi, the teacher of knowledge.<a class="fnref" id="fnref-p55-1" href="#fn-p55-1"><sup>1</sup></a> Manifesting as a resplendent light like a full moon, She adopts the Vedic path and bestows grace. The Sula offers protection to the Souls when the individual meditates on her in his hṛdaya kamala. She appears in breath, inhalation, exhalation and vitariha Puraka, rēcaka and praṇa as Narayani which is the end of Vedas and Vedantas.<a class="fnref" id="fnref-p55-2" href="#fn-p55-2"><sup>2</sup></a></p>
+    <p>This chapter also deals with the worshipping Śakti through the process of meditation which is called antaryaga of the eight fold yogic ashtangayoga path. After giving the process of Karanyasa it deals with the meditation of the nine Śaktis, beginning with Vama and ending with Manonmani, each mediated in their respective vital centres adhāra sthānas, the last one being adored at the head in the dvadasanta.<a class="fnref" id="fnref-p55-3" href="#fn-p55-3"><sup>3</sup></a> In this process the Devi like a creeper emanates from the muladhara centre, like an illuminating light and slowly reaches the sahasrara centre also called matimandala and returns with the nectar. In this aspect she resembles the great fire emanating from the sacrificial altar.<a class="fnref" id="fnref-p55-4" href="#fn-p55-4"><sup>4</sup></a></p>
+    <p>The chapter also deals with anganyasa (assigning the various limbs of body with the mantras). Sikha, Kavaca and Astra mantras are to be recited while doing the anganyāsa and the Supreme is invoked with various hand signs, like netra, sula and yoni mudras.<a class="fnref" id="fnref-p55-5" href="#fn-p55-5"><sup>5</sup></a></p>
+    <p>The triple gunas (satva, rājas and tamas) of the devotees are subdued and Devi bestows grace as Bhairavi, Nili and Nisăcari.<a class="fnref" id="fnref-p55-6" href="#fn-p55-6"><sup>6</sup></a></p>
+    <p>After dealing this process of antaryaga, Thirumalar enters into the realm of poetic ecstacy, the thrill of joy, he himself has experienced. He says the Vedas, the world of sentient and non-sentient beings, the five elements and the four directions are all nothing but the manifestation of this Universal Energy, who is the light of lights and the illuminating power of the individual. She is the body and soul of Isa as Adi Bhairavi.<a class="fnref" id="fnref-p55-7" href="#fn-p55-7"><sup>7</sup></a> She is the most beautiful embodiment of the very ambrosia, Amrtānandasundari, who has created the sun, moon and fire. She resides in the heart of those who are capable of listening to the divine sound of the anklet. She is also called the Goddess Kumari, as Kanya (the Goddess of the southern extreme).<a class="fnref" id="fnref-p55-8" href="#fn-p55-8"><sup>8</sup></a></p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p55-1">Tirumandiram, IV. 1079. <a class="fnback" href="#fnref-p55-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p55-2">Ibid., IV. 1088. <a class="fnback" href="#fnref-p55-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p55-3">Ibid., IV. 1090. <a class="fnback" href="#fnref-p55-3" title="back to text">&#8617;</a></li>
+            <li id="fn-p55-4">Ibid., IV. 1090. <a class="fnback" href="#fnref-p55-4" title="back to text">&#8617;</a></li>
+            <li id="fn-p55-5">Ibid., IV. 1091. <a class="fnback" href="#fnref-p55-5" title="back to text">&#8617;</a></li>
+            <li id="fn-p55-6">Ibid., IV. 1098. <a class="fnback" href="#fnref-p55-6" title="back to text">&#8617;</a></li>
+            <li id="fn-p55-7">Ibid., IV. 1099. <a class="fnback" href="#fnref-p55-7" title="back to text">&#8617;</a></li>
+            <li id="fn-p55-8">Ibid., IV. 1102. <a class="fnback" href="#fnref-p55-8" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.56 ============ -->
+<section class="pg" id="p56">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">56<span class="src">page_072</span></span></div>
+
+    <h3>Purna Śakti</h3>
+    <p>The seventh chapter of the fourth Tantra is captioned Purna Śakti, the comprehensive energy, the Devi in her full aspect. She protects the soul in times of suffering while Śiva in times of pleasure. Śiva and Śakti are the real parents of the universe. As Yoga Śakti, Devi will help the individual to cross the maya alias bindu and Nada. She is Yoga Śakti, as the resplendent pitha, facing South, like Dakshinamurti. She resides as Yoga Śakti in the middle of naval.<a class="fnref" id="fnref-p56-1" href="#fn-p56-1"><sup>1</sup></a></p>
+    <p>Thirumular says the Devi is Srividya. Sri Cakra consists of nine triangles. When the Vedic mantra, Rudram is recited, She manifests herself with three eyes and holding gada and abhaya mudra (Rudra yamala). It is interesting to mention here that the temple of Kamakshi at Kanchipuram is called Nabhi sthana and a pitha has been installed in the antarala as yonipitha. In the centre of the pitha which is in the form of Yoni, there is Sri Cakra drawn. The worship in the temple is performed, according to Vedic tradition (not Agamic tradition). It only suggests the prominent role of Rudram as mentioned in this text.</p>
+    <p>The Vaihkari vak emanates as nāda from bindu and rising as an illuminating light reaches the tongue. The centre between the eyebrows is the place where the Śakti manifests herself as pure knowledge and in the further regions as pure experience. By medidating upon her as a Bălā, a young girl, one would himself become a youth. In another interesting statement the text, says one would become a Devi himself by medidating upon her. This is again the highest concept of the Saktas.</p>
+    <p>The Parasiva does the panca kritya act, in association with Icca, Kriya and Jnana saktis. Śiva and Śakti are united as flower and its fragrance, Śakti manifests as the syllables, beginning with ‘A’ and ending with ‘ksha’. Those who visualise the Lord in Matimandala are Hatayōgins. The Śakti resides in 224 Bhuvanas. The world is protected by Navasakti. The Devi in association with Siva teaches supreme knowledge. Parasakti appears as Virat svarūpi, wearing silk and skin, traverses the universe with her feet. She wears Candra, Surya and Agni as ornaments.</p>
+    <p>In this chapter we have an interesting reference. The Devi is said to delight in sexual union. Her liking for maithuna is pointedly mentioned in its esoteric sense, which is important to show, that though the echoes of Vāmācāra are seen yet it is the sublime Dakshinācāra that doiminates the work.<a class="fnref" id="fnref-p56-2" href="#fn-p56-2"><sup>2</sup></a></p>
+    <div class="tamil">இன்பக்கலவி இனிதுறை தையள்</div>
+    <p class="translit">Inbak Kalavi Inidurai Taiyal.</p>
+
+    <h3>Adhara Adheya</h3>
+    <p>The eighth chapter deals with the container and the content. Śakti is the Adhāra of Śiva. For the happiness of the world Śiva lived as Bhogadeva united with the Śakti.</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p56-1">Tirumandirum, IV. 1112. <a class="fnback" href="#fnref-p56-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p56-2">Ibid., IV. 1127. <a class="fnback" href="#fnref-p56-2" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.57 ============ -->
+<section class="pg" id="p57">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">57<span class="src">page_073</span></span></div>
+
+    <p class="cont">(Tantra is a Bhoga marga). The place where Śakti as Kanya manifests herself is red in colour. She resides in the head (Siras) with sixteen kalas. Śakti is adored by Yamala<a class="fnref" id="fnref-p57-1" href="#fn-p57-1"><sup>1</sup></a> Āgama. Before the creation of this universe, Śakti remained united with Śiva as Parāśakti. Śakti and Śiva resemble sexual union and its delight. Yoga Śakti is represented in pitha, and faces south (as Dakshinamurti). Yoga Śakti is in the middle of the naval (Nabhi) and has her feet in the North. She is in the form of Sri Vidya Sri Cakra which consists of nine triangles. When the Rudra hymn is uttered she manifests herself with three eyes, gada and abhaya mudra. Vaikarivak, emanates as nade from bindu, and rising as a resplendent light, comes through the tongue. From Muladhara to Visuddhi sthana, Śakti manifests herself as knowledge (jnana), and above that as experience. Those who meditate upon Devi, become Devi themselves. One will attain Samadhi when meditating on undivided Śiva and Śakti. Śiva's enjoyment with Śakti is Māyā. The virgin remained united with her lover.<a class="fnref" id="fnref-p57-2" href="#fn-p57-2"><sup>2</sup></a> Śiva is the support of Śakti and Śakti is the support of Siva. They remain as adhara and adheya to each other.</p>
+
+    <h3>Eroli Cakra</h3>
+    <p>The next chapter deals with the cakra in the form of resplendent light moving upwards. The letters ‘a’, ‘u’ and ‘ma’ (of Aum). Nada and Bindu, and ‘Si’ are Sivaksharas. ‘Va’ is Śakti akshara. The 16 letters ‘a’ to ‘ah’ and the two letters ‘ha’ and ‘ksha’ making a total of 18, reside in the Visuddhi and Ajna cakras. Śiva passing these cakras and residing in candramandala is the kaladevata. He himself manifests as 360 days, Pakshas, Rius, months and days. The twelve rasis are divided into 3 parts. Taurus, leo, gemini and capricorn form Mesha Vithi, Pices; Aries, Virgo and Libra, form Rshba vithi, Sagittaurus and Scarpio form the gemini path. One should medidate on the six ādhāras and the twelve rasis. This is called Rasi cakra. By the energy of Śakti, the five elements appeared as light. They mingled into one great illumination. From these emanated the universe. The soul reside in this universe. The world is the effect of Bindu.</p>
+    <p>When Bindu and Nada coalesce, in equal proportion, they form the seed of this material universe. When the proportion of the Bindu is reduced and Nada increased to eight times, it is mantra bija. Two mantra bijas appear from Nada. When Bija and Nada join, bija enlarges into bindu. Bindu is the cause of all things. It is the energy of the lotus feet of the Lord.</p>
+    <p>The words Bindu and Nada constitute the cakra. There is no use of mearly uttering the mantras and drawing the diagram. The result can be obtained by medidating upon pranava in the inner soul. The mantra arising from the cakra, enlarges into Dambana, Mohana, Uccatana, Vidvēshana, Mārana and Vasya. The Eroli cakra and its mantra if used for (Kamya) material desires will not be effective.</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p57-1">Tirumandiram, IV. 1169. <a class="fnback" href="#fnref-p57-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p57-2">Ibid., IV. 1172. <a class="fnback" href="#fnref-p57-2" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.58 ============ -->
+<section class="pg" id="p58">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">58<span class="src">page_074</span></span></div>
+
+    <h3>Bhairava Cakra</h3>
+    <p>The next chapter is captioned Bhairava cakra. It is a short chapter, dealing with the greatness of Adi Bhairava, and His cakra, the worship of which would destroy the opponents. Most of the commentators take the opponents as real enemies of the individual and suggest that this is intended for those who want to destroy their enemies. It is also possible to interpret this chapter in its esoteric sense in confirmity with the general tune of this text. The enemies referred to are one's own senses which are the obstacles to the realisation of the Supreme. This chapter is also interesting from another angle. It gives the iconographic description of Adi Bhairava as having six hands and holds Sūla, Kapāla, Damaruka, pāsa, head and sword. He is red in colour. Those desiring victory over enemies, should worship Bhairava with liquor, Madhu and Sandhu, Jawadu and Punugu nei (ghee). The cakra consists of six and six — 36 squares. The dead body of the opponents can be tossed up as a ball when Bairava drinks the life of the opponent. It is interesting to see that Bhairava is given a prominent position in this section. Secondly his invocation is intimately connected with war. Thirdly the offer of madhu (liquor) is also advocated, though probably in its finer sense as honey.</p>
+
+    <h3>Sambhavi Maṇḍali Cakra</h3>
+    <p>Another short chapter details the drawing of the cakra and the adoration of Sambhavi. The cakra consists of 8×8 — 64 squares in which four lingas are drawn. The five sacred letters Pancaksharas are medidated upon. Any one can mediate upon this Sambhavi cakra and Pancakshara, a universal approach, without caste, creed or sex). It may be mentioned that the worshippers of the Devi are said to take Sambavi Dikshā, in other works. Another point of interest is that this cakra is called Näḍari Mandala, is well known to the people. Since all people could worship this aspect, this cakra seems to be called popular Mandala. Everything in the universe, the object we see, the God we adore, the temple we revere, the body, feelings, sleep etc. are all the same Śakti. The Devi is also called Kamukā. (It is of interest to mention that the Amman shrines in Tamil Nad are called Kamakoṭṭam).</p>
+
+    <h3>Bhuvanapati Cakra</h3>
+    <p>The five letters from ‘ka’ are golden in colour. The six letters from ‘ha’ are red in colour. The four letters from ‘ca’ are pure white in colour. The Parasakti (the anga of Isa) manifests as eight Śaktis, as Parasakti, Adi Śakti, Bindu Śakti, Manonmani, Maheśvari, Umā, Lakshmi and Saraswati. These eight forms of Śakti, following the eight yogas, unite with Nädänta. The form of Yantra is then detailed. This Yantra was probably held superior to others and was called Yantra raja the emperor among mystical diagrams.</p>
+    <p>The invocation, establishing the vital breadth and meditation, Avahana, Prāna pratishta and dhyana are prescribed in her worship. The Devi is said to be red in colour, wearing a red silk. She holds Ankusa, Pasa and Abhaya and wears gem set</p>
+</section>
+
+<!-- ============ p.59 ============ -->
+<section class="pg" id="p59">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">59<span class="src">page_075</span></span></div>
+
+    <p class="cont">ornaments. She is offered milk and the mantra Naradaya Svaha is uttered in all the four directions. Then udvasana is done and the left over (sesha) is partaken.</p>
+
+    <h3>Navakshari Cakra</h3>
+    <p>The 13th chapter of the fourth Tantra is called Navākshari (nine syllables). This chapter may be called a chapter on mantra Sadhana. The nine sacred syllables as given in this chapter are ‘Chaum’, ‘Aum’, ‘Haum’, ‘Am’, Krim, Aim, Rim and Srim. Each of these syllables are said to contain nine syllables, the combination making a total of 81 syllables. By the combination of various syllables, different Śaktis are propitiated and their grace attained. The manifestations of these Śaktis, and their dhyānaslokas are given in this chapter which is the last of the fourth Tantra (section) in this text. Thus it is essentially a mantra sadhana.</p>
+    <p>Before discussing the text it is pertinent to note what Sir John Woodroffe has to say on the Sakta aspect of the mantra sadhana. “A mantra is like everything else, Śakti. Each mantra is the Embodiment of a particular form of consciousness of Śakti. This is the Mantra Śakti. Consciousness of Śakti also exists in the form of the Sadhaka. The object then is to unite these two when thought is not only in the outer husk but is vitalised by will, knowledge and action through its conscious centre in union with that the mantra. The latter is Devata or a particular manifestation of Śakti; and the Sadhaka who identifies himself with the Śakti.<a class="fnref" id="fnref-p59-1" href="#fn-p59-1"><sup>1</sup></a></p>
+    <p>As the Vamas are Śiva Śakti concentration on them draws the mind towards and then unifies it with the Devata which is one with the Mantra. The Devata of the Mantra, is only the creative Śakti assuming that particular form. As already stated, Devata may be realised in any object not merely in mantras, yantras, Ghatas, Pratimas or other ritual objects of worship. The same power which manifests to the ear in the mantra is represented in the lines and curves of the yantra which the Kulavali Tantra says, is the body of the Devata.</p>
+    <p>The Devata is thus the graphic symbol of the Śakti, indicated by the Mantra, with which identification takes place. As in Kundalini yoga so also here the identification of the sadhaka with different mantras gives rise to various Vibhutis or powers; for each grouping of the letters represents a new combination of Matuka Śakti. It is the eternal Śakti who is the life of the Mantra. Therefore siddhi in Mantra Sadhana is the union of the Sadhaka's Śakti with the Mantra Śakti; the identification of the Sadhaka with the Mantra is the identification of the knower, knowing and known or Sadhaka, Mantra and Devata. Then the Mantra works.<a class="fnref" id="fnref-p59-2" href="#fn-p59-2"><sup>2</sup></a></p>
+    <p>What is dealt with in the chapter on Navakshari cakra of the Thirumandiram is essentially the same as discussed by Woodroffe above. Thus it is evident, this chapter is truly a Sakta work. Thirumular says that he is describing the circle of Navakshari (nine syllables) each having nine aksharas making a total of eighty one and this circle begins</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p59-1">Śakti and Sakta by Sir. John Woodroffe, P. 509-510. <a class="fnback" href="#fnref-p59-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p59-2">Ibid., P. 511-513. <a class="fnback" href="#fnref-p59-2" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.60 ============ -->
+<section class="pg" id="p60">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">60<span class="src">page_076</span></span></div>
+
+    <p class="cont">with ‘Klim’ and ends with ‘Caum’. This is clearly a subjective recitation (ullelum) which will confer navākshart Śakti. It will bestow knowledge, education and manifest itself as a luminary. The cakra is to be made of silver, gold or copper and should be medidated upon. The Śakti should be worshipped with sambha paddy and arha grass reciting the mantras beginning with Srim and ending with Klim. She is Dharma devata. Kāmākshi of Kanchi worshipped in Sri cakra is called Dharmadevata. This Devi is black and will bestow all auspicious things on earth and conquest of death.</p>
+    <p>As mentioned earlier the text deals with the worship of various cakras and mantras and in that sense is a compendium of Sakta yantrōpāsana. A second cakra is dealt with then in which the mantras beginning with ‘Hrim’ and ending with ‘Srim’ are to be invoked and worshipped by medidation. The worship of this is intended to draw people towards the worshipper. So this may be considered a Vasikarana cakra. This Devi is the Para, the Goddess of all the eight quarters.</p>
+    <p>Another cakra, beginning with ‘Aim’ and ending with ‘Rim’ will bestow knowledge of Vedas, Āgamas and all other desired sciences. This is also considered the knowledge of the cosmic dance. This is recommended for those afflicted with mental agonies as it would remove all such afflictions. The medidation on this chakra is also said bestow golden colour to the devotee. Another chakra begins with ‘Haum’ and ends with ‘Krim’ and the presiding deity is called Sadasiva Nayaki, who is Manōnmani. Another chakra is dedicated to Amudesvari and is to be adored with the bijas ‘Lam’ to ‘Ham’. This chakra seems to be devoted to the control of breath (prana). Another chakra beginning with ‘Sam’ and ending with ‘Lam’ is called the cakra of illuminating lamp (Vilakkoli cakra). The Devi of this cakra is the embodiment of knowledge. She pervades the supreme ākāsa, the space and dissolves all that has come into existance. In this cakra, Devi, the consort of the Lord of ‘A’ is invoked. She is identified as Navukkarasi (Vakdevi). She is the presiding deity of words and their meanings and knowledge (Kalvikkarasi).</p>
+    <p>The next cakra begins with ‘Kaum’ and ends with ‘Aim’. In this cakra, the Devi manifests as the embodiment of Tattvas (Tattvanayaki) and will remove lust, anger and the unending evil of karma. She witnessed the dance of the cosmic dancer, and is the Mother of this universe.</p>
+    <p>The next cakra is in praise of Parasakti<a class="fnref" id="fnref-p60-1" href="#fn-p60-1"><sup>1</sup></a> as the virgin, dwelling in forest Aranyavasini — Kanattu kanni kalanda para sakti). The bijaksharas begin with ‘Krim’ and ends in ‘Kaum’. The worship of this deity will bring rain and prosperity.</p>
+    <p>The next cakra, is discussed in detail. Even the method of drawing this cakra is given. It is called the Svayambu cakra (self manifesting cakra). It consists of 9×9 — 81 squares. The circles in this cakra are to be gold in colour, the line in yellow colour and the letters in green colour. After drawing this diagram, special oblations should be performed in sacrificial altar with ghee and Avis. Nine objects that give fragrance</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol><li id="fn-p60-1">Tirumandiram, iv. 1344. <a class="fnback" href="#fnref-p60-1" title="back to text">&#8617;</a></li></ol>
+    </div>
+</section>
+
+<!-- ============ p.61 ============ -->
+<section class="pg" id="p61">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">61<span class="src">page_077</span></span></div>
+
+    <p class="cont">are to be placed; they are sandal, Kumkumam, Kasturi, red smandal paste, Javvādu, Punugu, Paccaikarpuram, Gorocanai and Pani nir.</p>
+
+    <h3>Nine Śaktis</h3>
+    <p>After giving these nine cakras, the chapter gives the iconographic description of nine Śaktis and the result that would be obtained by worshipping them. However the name of the individual Śakti's are not given.</p>
+    <p>The Devi has six arms holding Parasu, Sula, Ankusa, Pasa, bow and arrow. The sacred syllable of this Devi is ‘Klim’ she is surrounded by 64 Śaktis and 64 kanyas, carrying bow and arrow in their two arms. This Devi is golden in colour and is the embodiment of mercy. The second aspect of Devi is that of Sri (Mahalakshmi). She has four hands and in both the upper arms holds lotus and the lower ones are held in abhaya and varada poses. She wears Kirita makuta and on her legs silambu. She is surrounded by sixty Śaktis and sixty virgins, kanyas. They would be carrying flowers in their hands. The Devi of this manifestation is Dhanalakshmi.<a class="fnref" id="fnref-p61-1" href="#fn-p61-1"><sup>1</sup></a> The third aspect of Devi is also four armed holding pāsa, ankusa, jnanamudra and a parrot. Her syllable is ‘Hrim’. She is surrounded by fifty six Śaktis and fifty six kanyas. This Devi helps in cutting asunder the bondage of the individual. The fourth manifestation is that of Saraswati. She is seated on a lotus and holds, abhaya, vyakhyānamudra, kundikā and akshamāla. She is surrounded by fifty two śaktis and fifty two kanyas. Another manifestation of the Devi shown with eight arms, holding flower, parrot, pasa, parasu, sword, sheild, bow and arrow, wears a garland of pearls and a breastband of coral beads. The Devi green in colour and wearing silken garment, is attended by 48 Śaktis and 48 kanyas who are holding their hands in protective poses. She is to be worshipped as Prāna Śakti. Another manifestation is shown with ten faces and twenty arms. The following are the weapons:</p>
+
+    <ol class="weapons">
+        <li>Pasa</li><li>Sula</li><li>Danda</li><li>Sudarva</li><li>Fire</li>
+        <li>Cakra</li><li>Jnanamudra</li><li>Spear</li><li>Arrow</li><li>Damaruka</li>
+        <li>Ankusa</li><li>Parrot</li><li>Bow</li><li>Flower</li><li>Pasa (Naga)</li>
+        <li>Parasu</li><li>Sword</li><li>Shield</li><li>Sankha</li><li>Kataka</li>
+    </ol>
+
+    <p>She is also seated on a lotus and is surrounded by 44 Śakti and 44 kanyas. She seems to be Siddhidhatri bestowing siddhis like Anima. Some aspects of this Devi are interesting. She is ten faced and twenty armed. The weapons in her arms are also detailed. She is indeed a unique conception rarely seen in the silpa sastras.</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol><li id="fn-p61-1">Tirumandiram, IV. 1379. <a class="fnback" href="#fnref-p61-1" title="back to text">&#8617;</a></li></ol>
+    </div>
+</section>
+
+<!-- ============ p.62 ============ -->
+<section class="pg" id="p62">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">62<span class="src">page_078</span></span></div>
+
+    <p>The next representation discussed is Sadasivanāyaki, (Manonmani) with five heads and ten arms, holding bell, sula, kapāla, parrot, snake, parasu, sword, ball, flower and damaruka. She is surrounded by 46 saktis and 46 kanyas. She manifests in the Kasi cakra. The medidation of this Devi will lead to the realisation of the Siva-pancakshara ‘Sivayanama’. Another manifestation is called Amrtakala. She is two armed, holding amrta kalasa in her arm. She is attended by 36 Śaktis and 36 kanyas. She seems to be the Mohini and is therefore called Nārāyanasamā. The ninth aspect discussed is the Omkarasvarūpi two armed, slender like a creaper and the very embodiment of feminine beauty. She is the daughter of Girindra, and is attended by 32 Śaktis and 32 kanyas.</p>
+    <p>Having described these nine aksharas, nine cakras and Śaktis, the text says that there is nothing that one cannot obtain by adoring this Devi. In fact the author extols the greatness of Śiva as a grhasta, united with Devi and the allusions are sufficient enough to show, that all people particularly grahastas can obtain the supreme bliss in this path. As discussed in other parts of this work, the worship of Śakti and Śiva, did not emphasise renunciation as a sole path to realisation. Again and again they catagorically assured the householder that the path of realisation is open to him.</p>
+    <p>A careful analysis of this fourth section of Thirumandiram, clearly shows that it is a full Tantra sastra of the Sakta cult. Various manifestations of the Devi are dealt with, including the iconographic features, respective sacred syllables, the mystical diagrams (cakras), and even the homa associated with it etc. We have also shown that even among the Sakta school, different Śaktis are prescribed for different purposes.</p>
+    <p>Besides this section, Thirumülar gives the Sakta concept of six cakras in the body, the nada and bindu concepts, Kundalini Śakti remaining as a coiled serpent, the ability to rise this power which will pierce the psychic centres and reach the sahasrara, Parasakti being the cause of the entire universe etc., in many other verses, which it is needless to discuss in detail. We will cite only a few instances. In the seventh section we have time and again the concept of Śakti figuring. The first appearance caused in the world by Sadasiva is Śakti. All the forms of the universe are Śakti. All the gunas of the world are Śakti. Bhoga, Moksha, Buddhi, Siddhi, the total of 36 tattvas etc., are also Sadasiva.<a class="fnref" id="fnref-p62-1" href="#fn-p62-1"><sup>1</sup></a> (1713-1714).</p>
+    <p>Brahma, Vishnu, Rudra, Isa and the five faced Sadasiva, Nada and Bindu, Adhārasakti and the Parasiva are commonly called Sadasiva.<a class="fnref" id="fnref-p62-2" href="#fn-p62-2"><sup>2</sup></a> Śakti is the earth, while Sadasiva is the universe. Śakti and Siva constitute the mobile and immobile objects. Śakti is with form and Siva is formless. Śakti and Śiva constitute the 36 Tattvas. Sadasiva with five heads and ten arms is invoked with five angamantras; they are hrdaya (heart), siram (head), sikha tuft. Kavaca (sheath) and netra (eye) mantras. In each we have the Śakti manifesting in different forms. In hrdaya mantra she manifests as Jnanasakti; in Siromantra, she is Parasakti; in sikha, she is Adi Śakti and in the sheath she is Icca</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p62-1">Tirumandiram, VII. 1713-14. <a class="fnback" href="#fnref-p62-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p62-2">Ibid., VII. 1731. <a class="fnback" href="#fnref-p62-2" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.63 ============ -->
+<section class="pg" id="p63">
+    <div class="pg-head"><span class="runhead">Tantrism in Tamil Devotional Literature</span><span class="pg-head-rule"></span><span class="folio">63<span class="src">page_079</span></span></div>
+
+    <p class="cont">and in Netrā, she manifests as kriya Śakti.<a class="fnref" id="fnref-p63-1" href="#fn-p63-1"><sup>1</sup></a> The Pitha of linga is music and Omkara.<a class="fnref" id="fnref-p63-2" href="#fn-p63-2"><sup>2</sup></a> Bindu and Nada constitute the Linga in which Bindu is the pitha and Nada is the linga. The two united are to be adored as Adhāra devas. Śakti in the pitha is Atma Śakti; in the kanta portion is Vidya Śakti and the linga portion is Sivatattva and the Śakti that manifests in the whole, is called Sadasiva. The creation of the universe, the individual soul made to go through the experience of Maya and Kanma and bestowal of final emancipation are all the sports Śiva and Śakti.<a class="fnref" id="fnref-p63-3" href="#fn-p63-3"><sup>3</sup></a></p>
+
+    <h3>The age of the work</h3>
+    <p>The date of this work is essential for the study of Sakta cult in India as such. The traditional accounts that Thirumular lived in 6000 B.C. and that he lived for 3000 years, composing one verse each year are to be left to the realm of myths. The highly advanced concepts of Sakta and Saiva faith expressed in this work; the references to Chidambaram and the coloquial expressions found abundantly in this work are considered by some scholars as a pointer to a late date for this work. We do not think that it is possible to fix the date of this valuable work with any certainity, but rest satisfied with indicating the possibilities.</p>
+    <p>That the work seems to be earlier than 12th century A.D. appears to be certain, for Cekkiḻār, the author of the Periyapuranam, who adorned the Chola court, refers to the 3000 verses composed by Thirumular basides giving his life history. Cekkiḻār based his work on the Thirtthondar antati by Nambi Andar Nambi and Thiruttondatthai of Sundaramurti. Nambi Andar Nambi is assigned to the 11th century A.D. He refers to Thirumulan as a native of Sattanur and belonging to a family of Cowherds. He also says that Mūlaṉ sang the essence of Vedas in pure Tamil.</p>
+    <div class="tamil">குடிமன்னு சாத்தனூர்க் கோக்குல மேய்ப்போன் குரம்பு புக்கு
+முடிமன்னு கனற் பிறையாளன் தன்னை முழுத்தமிழால்
+படிமன்னு வேதத்தின் சொற்படியே பரவிட்டென்றுச்சி
+அடிமன்ன வைத்த பிரான் மூலனாகின்ற அங்காளனே.</div>
+    <p>Nambi Andar Nambi refers also to the legend that Mūlaṉ entered the body of the Cowherd. This would take the work earlier than 11th century. As has been mentioned above, Nambi Andar Nambi himself elaborated the list of saints given by Sundaramurti. Sundaramurti, who is assigned to 8th century A.D., refers to Thirumulan as one of the saints. He does not give any exploits of Thirumulan nor does he refer to the composition of this work. Some scholars try to argue that there was no doubt a saint, Thirumulan, but the author of this Thirumandiram must be a later saint, the identity being only in their names. The reasons for this view are the highly developed philosophic contents and terminology. However, it is seen that Nambi Andar Nambi who elaborated Sundaramurti's work has to the extent possible preserved the legends</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol>
+            <li id="fn-p63-1">Tirumandiram, VII. 1744. <a class="fnback" href="#fnref-p63-1" title="back to text">&#8617;</a></li>
+            <li id="fn-p63-2">Ibid., VII. 1752. <a class="fnback" href="#fnref-p63-2" title="back to text">&#8617;</a></li>
+            <li id="fn-p63-3">Ibid., VII. 1757. <a class="fnback" href="#fnref-p63-3" title="back to text">&#8617;</a></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ p.64 ============ -->
+<section class="pg" id="p64">
+    <div class="pg-head"><span class="runhead">Tantric Cult of South India</span><span class="pg-head-rule"></span><span class="folio">64<span class="src">page_080</span></span></div>
+
+    <p class="cont">connected with the life of other saints. There is no reason to believe that a different legend is given only with reference to Mūlaṉ, though the possibility of some mixing up in the intervening period cannot be completely ruled out. That would place Mūlaṉ, earlier than 8th century A.D. The great Saivite saints Appar and Sambandar who lived in 7th century A.D. have no reference to Thirumalan. The absence of reference is though not an argument, for they do not refer to many other saints mentioned by Sundaramurti, yet we may hold that the work of Mūlaṉ has not attained sufficient popularity to have attracted their attention. In all probability Mūlaṉ himself wrote his work sometime in 7th century A.D.</p>
+    <p>This dating would of course give raise to further problems which need an independent enquiry. For example whether the twenty eight Āgamas and their upāgamas were well codified before this period? Whether the Rudra Yamala has developed to the extent found in this text? Whether Nātha cult to whom we assign Mūlaṉ, has developed in Northern India before the 8th century A.D., to such great heights? What was the role of Benaras as a centre of Saiva learning before the 8th century A.D. and what was its relation with the Vama school of Bengal? Whether in Benaras itself, the Vama school was squarely denounced as has been done by Thirumular? The constant wave of ideas emanating and spreading towards the south and the impact of the Tamil scholars visiting Benaras and leaving their imprint on the developing ideas there, also deserve a special study.</p>
+    <p>We would only say that the Thirumandiram cannot possibly be dated later than 8th century A.D. and for the study of Tantric cult it is one of the ancient works in the whole of India and needs greater attention than it has received so far.</p>
+
+    <h2>Thiruppugal</h2>
+    <p>Thiruppugal<a class="fnref" id="fnref-p64-1" href="#fn-p64-1"><sup>1</sup></a></p>
+    <p>One of the greatest figures of late medieaval period (14) who revived the Bhakti movements, by his excellant poems was Arunagirinatha. Arunagiri was a great bhakta of Subrahmanya and has composed hundreds of poems on him. His poems are collected and are popularly called Thiruppugal. Besides Thiruppugal, Arunagiri has composed Kandar anubhuti and Kandar alamkāra, both one hundred verses each, on Lord Skandha. Besides a number of other poems are also assigned to him. His poem are sung reverentially by millions of devotees to this day. They are in excellent Tamil, with an admixture Sanskrit, and are known for their rhythm and deep meanings.</p>
+
+    <h3>Life of Arunagiri</h3>
+    <p>Arunagiri belonged to the family of Dindima family which received the patronage of the Vijayanagara rulers in later times. Arunagiri spent the major part of his life at Thiruvannamalai, a place known for its impressive hill and a great spiritual attraction.</p>
+
+    <div class="notes"><span class="notes-label">Footnotes</span>
+        <ol><li id="fn-p64-1">‘Tiruppugal’, Saiva Siddhands Samajan, Ed. <a class="fnback" href="#fnref-p64-1" title="back to text">&#8617;</a></li></ol>
+    </div>
+</section>
+
+</main>
+
+<footer>Transcribed from OCR text of printed pages 46–64 · scan boilerplate removed, wording left as scanned</footer>
+<a class="top" href="#" aria-label="Back to top">↑</a>
+
+<script>
+(function(){
+    /* build the page jump list from the sections themselves */
+    var sel=document.getElementById('jump');
+    var pages=document.querySelectorAll('section.pg');
+    pages.forEach(function(s){
+        var num=s.querySelector('.folio').textContent.replace(/page_\d+/,'').trim();
+        var o=document.createElement('option');
+        o.value='#'+s.id; o.textContent='p. '+num;
+        sel.appendChild(o);
+    });
+    sel.addEventListener('change',function(){
+        if(!sel.value) return;
+        document.querySelector(sel.value).scrollIntoView({behavior:'smooth',block:'start'});
+        sel.value='';
+    });
+
+    /* footnote jumps — handled in JS so a short hop is still obvious */
+    function fnJump(e){
+        var a=e.target.closest('a.fnref, a.fnback');
+        if(!a) return;
+        var id=a.getAttribute('href').slice(1), t=document.getElementById(id);
+        if(!t) return;
+        e.preventDefault();
+        t.scrollIntoView({behavior:'smooth', block:'center'});
+        document.querySelectorAll('.fn-flash').forEach(function(n){ n.classList.remove('fn-flash'); });
+        void t.offsetWidth;                       // restart the animation if same target twice
+        t.classList.add('fn-flash');
+        if(history.replaceState) history.replaceState(null,'','#'+id); else location.hash=id;
+    }
+    document.addEventListener('click',fnJump);
+
+    /* footnote visibility */
+    var btn=document.getElementById('toggle-notes'), hidden=false;
+    btn.addEventListener('click',function(){
+        hidden=!hidden;
+        document.querySelectorAll('.notes').forEach(function(n){ n.style.display=hidden?'none':''; });
+        document.querySelectorAll('a.fnref').forEach(function(n){ n.style.pointerEvents=hidden?'none':''; n.style.opacity=hidden?'.45':''; });
+        btn.textContent=hidden?'Show Footnotes':'Hide Footnotes';
+    });
+})();
+</script>
+</body>
+</html>
