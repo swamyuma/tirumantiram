@@ -87,15 +87,23 @@ def main():
             ev.die(str(ex))
         new_html[path] = (patched, orig)
 
-    data = json.load(open(ev.JSON_MIRROR, "r", encoding="utf-8"))
-    orig_json = len(data)
-    index = {o["verse_number"]: o for o in data}
-    for n, v in want.items():
-        if n not in index:
-            ev.die("verse %d missing from JSON mirror" % n)
-        index[n][args.field] = v
-    if len(data) != orig_json:
-        ev.die("JSON mirror entry count changed")
+    # The JSON mirror was removed from the working tree in the repo cleanup
+    # (commit ebb5d32); patch it only if it is actually there.
+    data = None
+    orig_json = None
+    if os.path.exists(ev.JSON_MIRROR):
+        data = json.load(open(ev.JSON_MIRROR, "r", encoding="utf-8"))
+        orig_json = len(data)
+        index = {o["verse_number"]: o for o in data}
+        for n, v in want.items():
+            if n not in index:
+                ev.die("verse %d missing from JSON mirror" % n)
+            index[n][args.field] = v
+        if len(data) != orig_json:
+            ev.die("JSON mirror entry count changed")
+    else:
+        print("  note: %s absent -- patching the HTML files only"
+              % os.path.basename(ev.JSON_MIRROR))
 
     for path, (patched, orig) in new_html.items():
         tmp = path + ".tmp"
@@ -115,7 +123,8 @@ def main():
     if args.dry_run:
         for path, (tmp, orig) in new_html.items():
             os.remove(tmp)
-        print("dry-run OK: all 3 files would stay valid with %d entries." % orig_json)
+        print("dry-run OK: %d file(s) would stay valid with %d entries."
+              % (len(new_html) + (1 if data is not None else 0), orig))
         return
 
     # ---- phase 2: back up and commit writes ---- #
@@ -126,13 +135,15 @@ def main():
         os.replace(tmp, path)
         print("  %-14s %s set (%d entries)  backup: %s"
               % (os.path.basename(path), args.field, orig, os.path.basename(bak)))
-    jbak = "%s.%s.bak" % (ev.JSON_MIRROR, ts)
-    os.replace(ev.JSON_MIRROR, jbak)
-    with open(ev.JSON_MIRROR, "w", encoding="utf-8") as fh:
-        json.dump(data, fh, indent=1, ensure_ascii=False)
-        fh.write("\n")
-    print("  %-14s %s set (%d entries)  backup: %s"
-          % (os.path.basename(ev.JSON_MIRROR), args.field, orig_json, os.path.basename(jbak)))
+    if data is not None:
+        jbak = "%s.%s.bak" % (ev.JSON_MIRROR, ts)
+        os.replace(ev.JSON_MIRROR, jbak)
+        with open(ev.JSON_MIRROR, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, indent=1, ensure_ascii=False)
+            fh.write("\n")
+        print("  %-14s %s set (%d entries)  backup: %s"
+              % (os.path.basename(ev.JSON_MIRROR), args.field, orig_json,
+                 os.path.basename(jbak)))
     print("done.")
 
 
