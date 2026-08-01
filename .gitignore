@@ -1,0 +1,13 @@
+Thirumanthiram_English_Natarajan_Archive.pdf
+_pages/
+__pycache__/
+*.bak
+build_*.py
+_align
+backup/
+backup/*md
+backup/*json
+jsons/
+*_parts/
+*md
+backup/ocr-out/*
