@@ -10,4 +10,4 @@ backup/*json
 jsons/
 *_parts/
 *md
-
+backup/ocr-out/*
